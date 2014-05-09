@@ -37,7 +37,8 @@ function centerItem(item,iWidth,iHeight){
 }
 
 $(window).scroll(function() {
- var sT = $(this).scrollTop();
+	if ($(window).width() > 999) {
+ 		var sT = $(this).scrollTop();
         if (sT >= 80) {
             $('#header').addClass('scrolled');
 			$('#header .black').hide();
@@ -47,6 +48,7 @@ $(window).scroll(function() {
 			$('#header .black').show();
 			$('#header .white').hide();
         }
+	}
 });
 
 function fadeNavitems() {
@@ -71,6 +73,9 @@ function fadeNavitems() {
 function colorTransition() {
 	originalColor = $('#footer .contact a').css('color');
 	originalBg = $('#footer .social-icon').css('background-color'); 
+	originalBorder = $('.button').css('border-color');
+	originalBtnBg = $('.button').css('background-color'); 
+	originalBtnColor = $('.button').css('color');
 	$('#footer .contact a').hover(function() { 
 		var colors = ["#ee3823","#fdb818","#2ba0a3"];  
 		var rand = Math.floor(Math.random()*colors.length);
@@ -78,7 +83,7 @@ function colorTransition() {
 	},function() {
 		$(this).animate({'color': originalColor},500);
 	});
-	$('#footer .social-icon, .button').hover(function() { 
+	$('#footer .social-icon').hover(function() { 
 		var colors = ["#ee3823","#fdb818","#2ba0a3"];  
 		var rand = Math.floor(Math.random()*colors.length);
 		$(this).animate({'background-color': colors[rand]}, 1000);
@@ -92,5 +97,23 @@ function colorTransition() {
 	},function() {
 		$('#footer .signup-cont .arrow').animate({'background-color': originalBg},500);
 	});
+	$('.button.white').hover(function() { 
+		var colors = ["#ee3823","#fdb818","#2ba0a3"];  
+		var rand = Math.floor(Math.random()*colors.length);
+		$(this).animate({'background-color': colors[rand], 'color': originalBtnColor, 'border-color': colors[rand]}, 500);
+	},function() {
+		$(this).animate({'background-color': originalBtnBg, 'color': originalBtnColor, 'border-color': '#231f20'},300);
+	});
+	$('.button.black').hover(function() { 
+		var colors = ["#ee3823","#fdb818","#2ba0a3"];  
+		var rand = Math.floor(Math.random()*colors.length);
+		$(this).animate({'background-color': colors[rand], 'color': '#231f20', 'border-color': colors[rand]}, 500);
+	},function() {
+		$(this).animate({'background-color': '#231f20', 'color': '#fff', 'border-color': '#fff'},300);
+	});
 	
+}
+
+function scrollToHome() {
+	$('body').scrollTo($('#section1'), 1000 );
 }

@@ -518,3 +518,55 @@ class Menu_With_Description extends Walker_Nav_Menu {
 		$output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
 	}
 }
+
+add_action( 'init', 'create_post_type' );
+function create_post_type() {
+
+	$args1 = array(
+		'labels' => array(
+			'name' => __( 'Services' ),
+			'singular_name' => __( 'Service' )
+		),
+		'public' => true,
+		//'has_archive' => true,
+		'rewrite' => array('slug' => 'services'),
+		'supports' => array( 'title', 'editor', 'thumbnail' )
+	);
+  
+  	register_post_type( 'Services', $args1);
+
+	// $args2 = array(
+	// 	'labels' => array(
+	// 		'name' => __( 'Projects' ),
+	// 		'singular_name' => __( 'project' )
+	// 	),
+	// 	'public' => true,
+	// 	'has_archive' => true,
+	// 	'rewrite' => array('slug' => 'our-services/projects'),
+	// 	'supports' => array( 'title', 'editor', 'thumbnail', 'excerpt' )
+	// );
+	//   
+	//   	register_post_type( 'Projects', $args2);
+	// 
+	// $args3 = array(
+	// 	'labels' => array(
+	// 		'name' => __( 'Quotes' ),
+	// 		'singular_name' => __( 'quote' )
+	// 	),
+	// 	'public' => true,
+	// 	'has_archive' => true,
+	// 	'rewrite' => array('slug' => 'quotes'),
+	// 	'supports' => array( 'title', 'editor' )
+	// );
+	//   
+	//   	register_post_type( 'Quotes', $args3);
+  
+	//register_taxonomy_for_object_type('post_tag', 'offerings');
+	//register_taxonomy_for_object_type('category', 'testimonials');
+	//register_taxonomy_for_object_type('category', 'projects');
+
+	//register_taxonomy_for_object_type('post_tag', 'page');
+	//register_taxonomy_for_object_type('category', 'page');
+	
+	
+}

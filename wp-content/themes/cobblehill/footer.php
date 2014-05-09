@@ -42,7 +42,7 @@
 							<div class="response" id="mce-success-response" style="display:none"></div>
 						</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
 					    <div style="position: absolute; left: -5000px;"><input type="text" name="b_cc803fd047281d20ac52aaf4a_fed43781f6" tabindex="-1" value=""></div>
-					    <div class="clear"><div class="submit-cont"><input type="submit" value="" name="subscribe" id="mc-embedded-subscribe" class="button"><img class="arrow" alt="" src="<?php echo get_template_directory_uri(); ?>/images/newsletter-arrow.png" /></div></div>
+					    <div class="clear"><div class="submit-cont"><input type="submit" value="" name="subscribe" id="mc-embedded-subscribe"><img class="arrow" alt="" src="<?php echo get_template_directory_uri(); ?>/images/newsletter-arrow.png" /></div></div>
 					</form>
 					</div>
 				</div>
