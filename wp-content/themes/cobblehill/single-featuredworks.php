@@ -11,12 +11,82 @@
 		</div>
 		<div id="row1" class="cont">
 			<div class="center-cont">
-				<?php if ( get_post_meta($post->ID, 'small_image', true) ) { ?>
-					<div class="left row"><img alt="" src="<?php the_field('small_image'); ?>" /></div>
-				<?php } ?>
-				<?php if ( get_post_meta($post->ID, 'project_copy', true) ) { ?>	
-					<div class="right row"><?php the_field('project_copy'); ?></div>
-				<?php } ?>
+				<div class="table">
+					<?php if ( get_post_meta($post->ID, 'small_image_left', true) ) { ?>
+						<div class="left row table-cell box-image"><img alt="" src="<?php the_field('small_image_left'); ?>" /></div>
+					<?php } else if (get_post_meta($post->ID, 'text_left', true)) { ?>
+					<div class="left row table-cell box-text"><?php the_field('text_left'); ?></div>
+					<?php } ?>
+					<?php if ( get_post_meta($post->ID, 'text_right', true) ) { ?>	
+						<div class="right row table-cell box-text"><?php the_field('text_right'); ?></div>
+					<?php } else if ( get_post_meta($post->ID, 'small_image_right', true) ) { ?>
+						<div class="right row table-cell box-image"><img alt="" src="<?php the_field('small_image_right'); ?>" /></div>
+					<?php } ?>
+				</div>
+			</div>
+		</div>
+		<div id="project-slider" class="cont">
+			<div class="center-cont">
+				<div id="flexslider" class="flexslider cont">
+					<ul class="slides">
+						<?php while ( have_posts() ) : the_post(); ?>
+							<?php echo get_the_content(); ?>
+						<?php endwhile; ?>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div id="row3" class="cont">
+			<div class="center-cont">
+				<div class="testimonial-cont cont">
+					<img alt="" src="<?php the_field('testimonial_background'); ?>" />
+					<div class="testimonial-info">
+						<div class="table">
+							<div class="table-cell">
+								<h3>testimonial</h3>
+								<div class="testimonial">"<?php the_field('testimonial'); ?>"</div>
+								<div class="author">&ndash; <?php the_field('testimonial_author'); ?>,<span>&nbsp;<?php the_title(); ?></span></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="row4" class="cont">
+			<div class="center-cont">
+				<div class="strategy box">
+					<?php
+					// $field_strategy = "field_5370f2c962794";
+					// 				$field = get_field_object($field_strategy);		
+					// 				foreach( $field['choices'] as $k => $v ) { 
+					// 					echo '<h5>' . $v . '</h5>'; 
+					// 				} ?>
+					<?php echo implode(', ', get_field('strategy')); ?>
+				</div>
+				<div class="creative box">
+					<?php
+					// $field_creative = "field_5370f31662795";
+					// 					$field = get_field_object($field_creative);		
+					// 					foreach( $field['choices'] as $k => $v ) { 
+					// 						echo '<h5>' . $v . '</h5>'; 
+					// 					} ?>
+				</div>
+				<div class="development box">
+					<?php
+					$field_key = "field_5370f34062796";
+					$field = get_field_object('development');
+					$value = get_field('field_name');
+									$label = $field['choices'][ $value ];
+									$value = get_field_object($field_key);
+								
+	
+					foreach( $value['choices'] as $k => $v ) { 
+						echo '<h5>' . $v . '</h5>'; 
+					
+					} ?>
+					
+					<?php echo implode('<br/> ', get_field('development')); ?>
+				</div>
 			</div>
 		</div>
 	</div>

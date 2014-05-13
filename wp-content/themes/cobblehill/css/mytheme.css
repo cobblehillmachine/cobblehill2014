@@ -100,9 +100,20 @@ mark {background:#fff;}
 #featured-work .work .table-cell {vertical-align:bottom;}
 
 /*SINGLE WORK*/
-#single-project .banner img, #single-project #row1 img {width:100%;}
+#single-project .banner img, #single-project #row1 img, #single-project .flexslider img, .testimonial-cont img {width:100%; height:auto;}
 #single-project .intro {margin:20px 0;}
 .right {background:#e5e5e5;}
+#single-project #row1 .left, #single-project #row1 .right {float:none !important;}
+#single-project #row1 .box-text {text-align:center; font-size:24px; padding:0 6%;}
+#single-project .flex-control-nav {position:relative; float:right; width:25%; margin-top:-100px;}
+#single-project .flex-control-nav li a {border:3px solid #fff; background:none; border-radius:15px; width:20px; height:20px; color:transparent; padding:5px; float:left; margin-right:15px; cursor:pointer;}
+#single-project .flex-control-nav li a.active, #single-project .flex-control-nav li a:hover {background:#fff;}
+.testimonial-cont {text-align:center; color:#fff;}
+.testimonial-cont .testimonial-info {position:absolute; top:0; width:100%; height:100%;}
+.testimonial-cont .testimonial {font-size:30px; max-width:800px; display:inline-block; margin-bottom:25px; padding:0 25px;}
+#row4 .strategy {background:url(../images/strategy-icon.png) no-repeat center 55px #2ba0a3;}
+#row4 .creative {background:url(../images/creative-icon.png) no-repeat center 55px #ee3823;}
+#row4 .development {background:url(../images/development-icon.png) no-repeat center 55px #fdb818;}
 
 
 /*REUSABLE*/
@@ -132,14 +143,13 @@ h5, #services-cont .service .service-list ul li {font-size:12px; text-transform:
 .table {display:table; width:100%; height:100%;}
 .table-cell {display:table-cell; vertical-align:middle;}
 .row, #services-cont .service, #featured-work .work {border-top:3px solid #231f20;}
-/*.strategy {background:url(../images/strategy-icon.png) no-repeat center 55px #2ba0a3;}
-.creative {background:url(../images/creative-icon.png) no-repeat center 55px #ee3823;}
-.development {background:url(../images/development-icon.png) no-repeat center 55px #fdb818;}*/
+
 
 /*FONTS*/
 .thin, .headline, #section2 .header span, h1 {font-family: "proxima-nova",sans-serif; font-style: normal; font-weight: 100;}
-.light, .home-tagline, h2 {font-family: "proxima-nova",sans-serif; font-style: normal; font-weight: 300; letter-spacing:1.5px;}
+.light, .home-tagline, h2, #single-project #row1 .box-text, .testimonial-cont .testimonial {font-family: "proxima-nova",sans-serif; font-style: normal; font-weight: 300; letter-spacing:1.5px;}
 .semi-bold, #nav li a, h3, h5, .button, .page-header a, #services-cont .service .service-list ul li { font-family: "proxima-nova",sans-serif; font-style: normal; font-weight: 600; letter-spacing:2px;}
+.robotoregular, .testimonial-cont .author span {font-family: 'roboto_slabregular';}
 
 /*RETINA*/
 @media (-webkit-min-device-pixel-ratio: 2) , (min-resolution: 192dpi) {
@@ -150,7 +160,7 @@ h5, #services-cont .service .service-list ul li {font-size:12px; text-transform:
 .span_1 {width:8.33333333333%;}
 .span_2 {width:16.6666666667%; float:left;}
 .span_3, #footer .social-cont, #services-cont .service .icon, #services-cont .service .service-list {width:25.0%; float:left;}
-.span_4, #footer .signup-cont, #section2 .header a, #section2 .cta  {width:33.3333333333%; float:left;}
+.span_4, #footer .signup-cont, #section2 .header a, #section2 .cta, #row4 .box  {width:33.3333333333%; float:left;}
 .span_5, #footer .contact-cont {width:41.6666666667%; float:left;}
 .span_6, #footer .contact, #footer .address, #services-cont .service .service-info, #featured-work .work-info, #featured-work .work .thumb, #single-project #row1 .left, #single-project #row1 .right {width:50%; float:left;}
 .span_8 {width:66.6666666667%; float:left;}
@@ -163,7 +173,7 @@ h5, #services-cont .service .service-list ul li {font-size:12px; text-transform:
 
 @media screen and (min-width:1281px) {
 	#single-project .banner {margin-top:-25%;}
-	.center-cont {width:70%;}
+	.center-cont {max-width:1700px;}
 }
 
 @media screen and (max-width:1229px) {
@@ -191,12 +201,11 @@ h5, #services-cont .service .service-list ul li {font-size:12px; text-transform:
 	#nav li {width:100%;}
 	#header {position:relative; float:left;}
 	#footer .contact-cont .address {margin-bottom:15px;}
-	#footer .social-cont, #footer .contact-cont {margin-bottom:45px;}
 	h1 {font-size:30px; line-height:34px;}
 	h2 {font-size:28px; line-height:32px;}
 	#section1 {padding:60px 0;}
 	#main-wrap, #single-project .banner {margin:0;}
-	.page-header {padding:55px 0 35px;}
+	.page-header {padding:55px 0 50px;}
 	
 	/*#HEADER*/
 	.logo {margin-top:5px;}
@@ -209,17 +218,23 @@ h5, #services-cont .service .service-list ul li {font-size:12px; text-transform:
 	#services-cont .service .icon {background-size:85px !important; width:20%;}
 	#services-cont .service .service-list {width:38.3333333333%; padding-top:50px;}
 	#services-cont .service .service-info {padding-top:35px;}
+	/*PROJECTS*/
+	#single-project #row1 .box-text {font-size:18px;}
+	.testimonial-cont .testimonial {font-size:20px;}
 	
 }
 
 @media screen and (max-width:767px) {
 	#footer .contact-cont, #footer .signup-cont, #footer .social-cont, #section2 .cta, #services-cont .service .icon, #services-cont .service .service-list, #services-cont .service .service-info, .button {width:100%;}
 	#section2 .header a {display:none;}
+	#footer .social-cont, #footer .contact-cont {margin-bottom:45px;}
 	#section2 .header span {margin-top:0;}
 	.page-header a {margin:15px 0 0; width:100%;}
 	#services-cont .service .icon {background-position:50% 35px !important; min-height:155px;}
 	#services-cont .service .icon.strategy {background-position:52% 30px !important; min-height:155px;}
 	#services-cont .service .service-list {padding:10px 25px 45px;}
+	#single-project #row1 .left, #single-project #row1 .right {width:100%; display:block;}
+	#single-project #row1 .box-text {padding:50px 25px;}
 }
 
 
