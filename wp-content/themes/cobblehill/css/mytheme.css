@@ -111,9 +111,10 @@ mark {background:#fff;}
 .testimonial-cont {text-align:center; color:#fff;}
 .testimonial-cont .testimonial-info {position:absolute; top:0; width:100%; height:100%;}
 .testimonial-cont .testimonial {font-size:30px; max-width:800px; display:inline-block; margin-bottom:25px; padding:0 25px;}
-#row4 .strategy {background:url(../images/strategy-icon.png) no-repeat center 55px #2ba0a3;}
-#row4 .creative {background:url(../images/creative-icon.png) no-repeat center 55px #ee3823;}
-#row4 .development {background:url(../images/development-icon.png) no-repeat center 55px #fdb818;}
+#row4 .box {background-size:80px !important; text-align:center; font-size:12px; text-transform:uppercase; padding:130px 0 30px 0; min-height:250px;}
+#row4 .strategy {background:url(../images/strategy-icon.png) no-repeat center 40px #2ba0a3;}
+#row4 .creative {background:url(../images/creative-icon.png) no-repeat center 40px #ee3823;}
+#row4 .development {background:url(../images/development-icon.png) no-repeat center 40px #fdb818;}
 
 
 /*REUSABLE*/
@@ -148,7 +149,7 @@ h5, #services-cont .service .service-list ul li {font-size:12px; text-transform:
 /*FONTS*/
 .thin, .headline, #section2 .header span, h1 {font-family: "proxima-nova",sans-serif; font-style: normal; font-weight: 100;}
 .light, .home-tagline, h2, #single-project #row1 .box-text, .testimonial-cont .testimonial {font-family: "proxima-nova",sans-serif; font-style: normal; font-weight: 300; letter-spacing:1.5px;}
-.semi-bold, #nav li a, h3, h5, .button, .page-header a, #services-cont .service .service-list ul li { font-family: "proxima-nova",sans-serif; font-style: normal; font-weight: 600; letter-spacing:2px;}
+.semi-bold, #nav li a, h3, h5, .button, .page-header a, #services-cont .service .service-list ul li, #row4 .box { font-family: "proxima-nova",sans-serif; font-style: normal; font-weight: 600; letter-spacing:2px;}
 .robotoregular, .testimonial-cont .author span {font-family: 'roboto_slabregular';}
 
 /*RETINA*/

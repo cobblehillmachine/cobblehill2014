@@ -55,36 +55,12 @@
 		<div id="row4" class="cont">
 			<div class="center-cont">
 				<div class="strategy box">
-					<?php
-					// $field_strategy = "field_5370f2c962794";
-					// 				$field = get_field_object($field_strategy);		
-					// 				foreach( $field['choices'] as $k => $v ) { 
-					// 					echo '<h5>' . $v . '</h5>'; 
-					// 				} ?>
-					<?php echo implode(', ', get_field('strategy')); ?>
+					<?php echo implode('<br/> ', get_field('strategy')); ?>
 				</div>
 				<div class="creative box">
-					<?php
-					// $field_creative = "field_5370f31662795";
-					// 					$field = get_field_object($field_creative);		
-					// 					foreach( $field['choices'] as $k => $v ) { 
-					// 						echo '<h5>' . $v . '</h5>'; 
-					// 					} ?>
+					<?php echo implode('<br/> ', get_field('creative')); ?>
 				</div>
-				<div class="development box">
-					<?php
-					$field_key = "field_5370f34062796";
-					$field = get_field_object('development');
-					$value = get_field('field_name');
-									$label = $field['choices'][ $value ];
-									$value = get_field_object($field_key);
-								
-	
-					foreach( $value['choices'] as $k => $v ) { 
-						echo '<h5>' . $v . '</h5>'; 
-					
-					} ?>
-					
+				<div class="development box">				
 					<?php echo implode('<br/> ', get_field('development')); ?>
 				</div>
 			</div>
