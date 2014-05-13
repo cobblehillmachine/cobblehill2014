@@ -4,6 +4,7 @@ $(document).ready(function() {
 		$('#nav').animate({'top':-380 +'px'}, 500, 'swing');
 		$('#nav ul li').hide();
 	});
+	$('.page-header a').addClass('button white');
 	colorTransition();
 	setInputFieldFunctions();
 

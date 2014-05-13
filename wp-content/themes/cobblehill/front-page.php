@@ -16,7 +16,7 @@
 	<div class="mid-cont">
 		<img id="elephant" alt="" src="<?php echo get_template_directory_uri(); ?>/images/elephant.png" />
 		<h5><?php the_field('short_headline'); ?></h5>
-		<div class="headline"><span><?php the_field('description'); ?></span></div>
+		<h1 class="headline"><span><?php the_field('description'); ?></span></h1>
 		<a class="button white" href="<?php the_field('link_1_url'); ?>"><?php the_field('link_1'); ?></a>
 	</div>
 </div>
@@ -35,7 +35,7 @@
 									$thumbnail = wp_get_attachment_image_src( $post_image_id, 'full', false);
 									if ($thumbnail) (string)$thumbnail = $thumbnail[0];
 								} ?>
-					<a class="cta" href="/services/#<?php echo strtolower(str_replace(' ','-',get_the_title())); ?>" style="background: url('<?php echo $thumbnail; ?>') no-repeat center 80px <?php the_field('background_color'); ?>">
+					<a class="cta <?php echo strtolower(str_replace(' ','-',get_the_title())); ?>" href="/services/#<?php echo strtolower(str_replace(' ','-',get_the_title())); ?>" style="background: url('<?php echo $thumbnail; ?>') no-repeat center 80px <?php the_field('background_color'); ?>">
 						<h3><?php the_title(); ?></h3>
 						<div class="hidden description cont"><div class="sep"></div><span><?php the_field('service_description'); ?></span></div>
 					</a>

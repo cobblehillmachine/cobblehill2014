@@ -535,19 +535,20 @@ function create_post_type() {
   
   	register_post_type( 'Services', $args1);
 
-	// $args2 = array(
-	// 	'labels' => array(
-	// 		'name' => __( 'Projects' ),
-	// 		'singular_name' => __( 'project' )
-	// 	),
-	// 	'public' => true,
-	// 	'has_archive' => true,
-	// 	'rewrite' => array('slug' => 'our-services/projects'),
-	// 	'supports' => array( 'title', 'editor', 'thumbnail', 'excerpt' )
-	// );
-	//   
-	//   	register_post_type( 'Projects', $args2);
-	// 
+	$args2 = array(
+		'labels' => array(
+			'name' => __( 'Featured Works' ),
+			'singular_name' => __( 'Featured Work' )
+		),
+		'public' => true,
+		//'has_archive' => true,
+		'rewrite' => array('slug' => 'featured-work'),
+		'supports' => array( 'title', 'editor', 'thumbnail' )
+	);
+	  
+	  	register_post_type( 'Featured Works', $args2);
+	flush_rewrite_rules();
+	
 	// $args3 = array(
 	// 	'labels' => array(
 	// 		'name' => __( 'Quotes' ),
