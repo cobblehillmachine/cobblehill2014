@@ -54,17 +54,25 @@
 		</div>
 		<div id="row4" class="cont">
 			<div class="center-cont">
-				<div class="strategy box">
+				<div class="strategy box row">
 					<?php echo implode('<br/> ', get_field('strategy')); ?>
 				</div>
-				<div class="creative box">
+				<div class="creative box row">
 					<?php echo implode('<br/> ', get_field('creative')); ?>
 				</div>
-				<div class="development box">				
+				<div class="development box row">				
 					<?php echo implode('<br/> ', get_field('development')); ?>
 				</div>
 			</div>
 		</div>
 	</div>
-	<?php twentyfourteen_post_nav(); ?>
+	<div id="post-nav" class="cont">
+		<div class="center-cont">		
+			<?php twentyfourteen_post_nav(); ?>
+			 <?php previous_posts_link('&laquo; Newer') ?>
+			    <?php next_posts_link('Older &raquo;') ?>
+	
+		</div>
+	</div>
+	
 <?php get_footer(); ?>

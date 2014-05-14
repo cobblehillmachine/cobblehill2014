@@ -41,6 +41,27 @@
 					</a>
 				<?php endwhile; wp_reset_query(); ?>
 	</div>
+	<div id="home-slider" class="cont">
+		<?php query_posts(array('post_type' => 'Featured Works', 'order' => 'DESC', 'posts_per_page' => 10)); ?>
+				<div class="flexslider cont">
+					<ul class="slides">
+						<?php while ( have_posts() ) : the_post(); ?>
+							<li>
+								<a href="<?php the_permalink(); ?>">
+									<img alt="" src="<?php the_field('header_image'); ?>" />
+									<div class="featured-info">
+										<span>featured work</span>
+										<h5><?php the_title(); ?></h5>
+										<h2><?php the_field('tagline'); ?></h2>
+										<div class="sub-title cont"><?php the_field('sub_title'); ?></div>
+									</div>
+								</a>
+							</li>
+							
+						<?php endwhile; ?>
+					</ul>
+				</div>
+	</div>
 </div>
 
 <?php get_footer(); ?>
