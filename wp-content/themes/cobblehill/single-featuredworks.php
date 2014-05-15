@@ -25,7 +25,7 @@
 				</div>
 			</div>
 		</div>
-		<div id="project-slider" class="cont">
+		<div id="project-slider" class="cont gray-bg">
 			<div class="center-cont">
 				<div id="flexslider" class="flexslider cont">
 					<ul class="slides">
@@ -36,10 +36,15 @@
 				</div>
 			</div>
 		</div>
-		<div id="row3" class="cont">
+		<div id="row3" class="cont black-bg">
 			<div class="center-cont">
 				<div class="testimonial-cont cont">
-					<img alt="" src="<?php the_field('testimonial_background'); ?>" />
+					<div class="desktop-img">
+						<?php $image = get_field('testimonial_background'); $size = 'full'; echo wp_get_attachment_image( $image, $size ); ?>
+					</div>
+					<div class="mobile-img">
+						<?php $image = get_field('testimonial_background'); $size = 'testimonial-bg'; echo wp_get_attachment_image( $image, $size ); ?>
+					</div>
 					<div class="testimonial-info">
 						<div class="table">
 							<div class="table-cell">
@@ -53,26 +58,22 @@
 			</div>
 		</div>
 		<div id="row4" class="cont">
-			<div class="center-cont">
-				<div class="strategy box row">
-					<?php echo implode('<br/> ', get_field('strategy')); ?>
-				</div>
-				<div class="creative box row">
-					<?php echo implode('<br/> ', get_field('creative')); ?>
-				</div>
-				<div class="development box row">				
-					<?php echo implode('<br/> ', get_field('development')); ?>
-				</div>
+			<div class="strategy box row">
+				<?php echo implode('<br/> ', get_field('strategy')); ?>
+			</div>
+			<div class="creative box row">
+				<?php echo implode('<br/> ', get_field('creative')); ?>
+			</div>
+			<div class="development box row">				
+				<?php echo implode('<br/> ', get_field('development')); ?>
 			</div>
 		</div>
 	</div>
-	<div id="post-nav" class="cont">
-		<div class="center-cont">		
+	<div id="post-nav" class="cont">	
 			<?php twentyfourteen_post_nav(); ?>
 			 <?php previous_posts_link('&laquo; Newer') ?>
 			    <?php next_posts_link('Older &raquo;') ?>
 	
-		</div>
 	</div>
 	
 <?php get_footer(); ?>

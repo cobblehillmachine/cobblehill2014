@@ -15,7 +15,7 @@
 				<div id="<?php echo strtolower(str_replace(' ','-',get_the_title())); ?>" class="work cont" style="background:<?php if ( get_post_meta($post->ID, 'background_image', true) ) { ?>url(<?php the_field('background_image'); ?>) no-repeat center 0 <?php the_field('background_color'); ?><?php } else { ?><?php the_field('background_color'); ?><?php } ?>;">
 					
 						<div class="thumb"><div class="table"><div class="table-cell"><?php the_post_thumbnail('full'); ?></div></div></div>
-						<div class="work-info <?php if ( get_post_meta($post->ID, 'background_image', true) ) { ?>color-white<?php } ?>">
+						<div class="work-info<?php if ( get_post_meta($post->ID, 'background_image', true) ) { ?>color-white<?php } ?>">
 							<h5><?php the_title(); ?></h5>
 							<h2><?php the_field('tagline'); ?></h2>
 							<div class="sub-title cont"><?php the_field('sub_title'); ?></div>
