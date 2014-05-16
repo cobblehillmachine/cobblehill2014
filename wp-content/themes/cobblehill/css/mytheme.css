@@ -269,6 +269,7 @@ h5, #services-cont .service .service-list ul li {font-size:12px; text-transform:
 	#single-project #row1 .left, #single-project #row1 .right {width:100%; display:block;}
 	#single-project #row1 .box-text, #our-story .blue {padding:50px 25px;}
 	h1 {font-size:28px;}
+	h2 {font-size:26px; line-height:30px;}
 	.paragraph:nth-child(2n+1) {padding:0;}
 	#story-slider .flexslider, .paragraph {text-align:center;}
 	#story-slider .flex-control-nav {margin-top:20px; width:160px; float:none; display:inline-block;}
