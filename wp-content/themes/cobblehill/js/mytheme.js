@@ -25,6 +25,8 @@ $(document).ready(function() {
 	colorTransition();
 	setInputFieldFunctions();
 	$('*').removeAttr( "title" );
+	var W = $(window).width();
+	$('#map').css({'width': W});
 
 
 });
@@ -39,6 +41,8 @@ $(window).resize(function() {
 		//$('.flexslider').stop().flexslider();
 		//$('#flexslider').removeClass('flexslider');
 	}
+	var W = $(window).width();
+	$('#map').css({'width': W});
 
 });
 
@@ -106,21 +110,21 @@ function colorTransition() {
 	$('#footer .contact a').hover(function() { 
 		var colors = ["#ee3823","#fdb818","#2ba0a3"];  
 		var rand = Math.floor(Math.random()*colors.length);
-		$(this).animate({'color': colors[rand]}, 1000);
+		$(this).animate({'color': colors[rand]}, 500);
 	},function() {
 		$(this).animate({'color': originalColor},500);
 	});
-	$('#footer .social-icon').hover(function() { 
+	$('.social-icon').hover(function() { 
 		var colors = ["#ee3823","#fdb818","#2ba0a3"];  
 		var rand = Math.floor(Math.random()*colors.length);
-		$(this).animate({'background-color': colors[rand]}, 1000);
+		$(this).animate({'background-color': colors[rand]}, 500);
 	},function() {
 		$(this).animate({'background-color': originalBg},500);
 	});
 	$('#footer .signup-cont #mc-embedded-subscribe').hover(function() { 
 		var colors = ["#ee3823","#fdb818","#2ba0a3"];  
 		var rand = Math.floor(Math.random()*colors.length);
-		$('#footer .signup-cont .arrow').animate({'background-color': colors[rand]}, 1000);
+		$('#footer .signup-cont .arrow').animate({'background-color': colors[rand]}, 500);
 	},function() {
 		$('#footer .signup-cont .arrow').animate({'background-color': originalBg},500);
 	});
