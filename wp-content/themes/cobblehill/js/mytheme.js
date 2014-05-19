@@ -27,6 +27,20 @@ $(document).ready(function() {
 	$('*').removeAttr( "title" );
 	var W = $(window).width();
 	$('#map').css({'width': W});
+	$(".blog-cont article:gt(3)").css("display", "none");
+
+	var lastidnum = "4";
+	$(window).on('scroll', function() {
+	    var scrollTop = $(window).scrollTop(),
+	        elementOffset = $("#" + (lastidnum - 1)).offset().top,
+	        distance = (elementOffset - scrollTop);
+
+	    if (distance <= 400) {
+	        $("#" + lastidnum).fadeIn("slow");
+	        lastidnum++;
+	    }
+
+	});
 
 
 });
@@ -107,7 +121,7 @@ function colorTransition() {
 	originalBorder = $('.button').css('border-color');
 	originalBtnBg = $('.button').css('background-color'); 
 	originalBtnColor = $('.button').css('color');
-	$('#footer .contact a').hover(function() { 
+	$('#footer .contact a, #cat-cont .cat-list li a').hover(function() { 
 		var colors = ["#ee3823","#fdb818","#2ba0a3"];  
 		var rand = Math.floor(Math.random()*colors.length);
 		$(this).animate({'color': colors[rand]}, 500);
