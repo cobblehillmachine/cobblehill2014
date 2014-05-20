@@ -61,10 +61,11 @@
 
 	</div>
 	<div id="main-wrap" class="cont">
-		<?php if(is_home() || is_single() || is_category()) { ?>
+		<?php if(is_home() || is_single() && !is_singular( 'featuredworks' )  || is_category() ) { ?>
 			<div id="cat-cont" class="black-bg cont">
 				<div class="mid-cont">
 					<h1>What's New</h1>
+					<div class="cat-sort hidden">SORT</div>
 					 <div class="cat-list"><?php $categories = wp_list_categories(array('child_of' => 1 , 'order' => 'ASC', 'title_li'=>'', 'hide_empty' => 0)); echo $categories; ?></div>
 				</div>
 			</div>

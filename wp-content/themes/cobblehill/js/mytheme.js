@@ -25,22 +25,6 @@ $(document).ready(function() {
 	colorTransition();
 	setInputFieldFunctions();
 	$('*').removeAttr( "title" );
-	var W = $(window).width();
-	$('#map').css({'width': W});
-	$(".blog-cont article:gt(3)").css("display", "none");
-
-	var lastidnum = "4";
-	$(window).on('scroll', function() {
-	    var scrollTop = $(window).scrollTop(),
-	        elementOffset = $("#" + (lastidnum - 1)).offset().top,
-	        distance = (elementOffset - scrollTop);
-
-	    if (distance <= 400) {
-	        $("#" + lastidnum).fadeIn("slow");
-	        lastidnum++;
-	    }
-
-	});
 
 
 });
@@ -55,9 +39,24 @@ $(window).resize(function() {
 		//$('.flexslider').stop().flexslider();
 		//$('#flexslider').removeClass('flexslider');
 	}
-	var W = $(window).width();
-	$('#map').css({'width': W});
 
+});
+
+$(window).scroll(function() {
+	if ($(window).width() > 999) {
+ 		var sT = $(this).scrollTop();
+        if (sT >= 10) {
+            $('#header').addClass('scrolled');
+			$('#header .black').hide();
+			$('#header .white').show();
+			//$('#cat-cont').css({'position': 'fixed', 'top': 77});
+        }else {
+            $('#header').removeClass('scrolled');
+			$('#header .black').show();
+			$('#header .white').hide();
+			//$('#cat-cont').css({'position': 'relative', 'top': 0});
+        }
+	}
 });
 
 
@@ -70,49 +69,22 @@ function setInputFieldFunctions(){
 	});
 }
 
-function centerItem(item,iWidth,iHeight){  
-   windowWidth = $(window).width();
-   windowHeight = $(window).height();
-   var w = windowWidth - iWidth; 
-   var h = windowHeight - iHeight;
-   $(item).css({
-       'left': w/2,
-       'top':h/2
-   });   
-}
-
-$(window).scroll(function() {
-	if ($(window).width() > 999) {
- 		var sT = $(this).scrollTop();
-        if (sT >= 80) {
-            $('#header').addClass('scrolled');
-			$('#header .black').hide();
-			$('#header .white').show();
-        }else {
-            $('#header').removeClass('scrolled');
-			$('#header .black').show();
-			$('#header .white').hide();
-        }
-	}
-});
 
 function fadeNavitems() {
-   // Hide the elements initially
-   var lis = $('#nav ul li').hide();
-         
-   // When some anchor tag is clicked. (Being super generic here)      
-   $('.hamburger').click(function() {
-	$('#nav').animate({'top':0 +'px'}, 500, 'swing');
-      var i = 0;
-     
-	setTimeout(function() {
+   var lis = $('#nav ul li').hide();          
+	$('.hamburger').click(function() {
+		$('#nav').animate({'top':0 +'px'}, 500, 'swing');
+		    var i = 0;   
+		setTimeout(function() {
 		(function displayImages() {
-	         lis.eq(i++).fadeIn(200, displayImages);
-	      })();
-	}, 500);  
-  
+		        lis.eq(i++).fadeIn(200, displayImages);
+		     })();
+		}, 500); 
+	}); 
 
-   }); 
+	$('#cat-cont .cat-sort').click(function() {
+		$('#cat-cont .cat-list').slideToggle();
+	});
 }
 
 function colorTransition() {
@@ -155,6 +127,13 @@ function colorTransition() {
 		$(this).animate({'background-color': colors[rand], 'color': '#231f20', 'border-color': colors[rand]}, 500);
 	},function() {
 		$(this).animate({'background-color': '#231f20', 'color': '#fff', 'border-color': '#fff'},300);
+	});
+	$('.blog-cont .entry-title a, .blog-cont .entry-meta a, .blog-cont .post-excerpt a').hover(function() { 
+		var colors = ["#ee3823","#fdb818","#2ba0a3"];  
+		var rand = Math.floor(Math.random()*colors.length);
+		$(this).animate({'color': colors[rand]}, 300);
+	},function() {
+		$(this).animate({'color': '#231F20'},300);
 	});
 	
 }

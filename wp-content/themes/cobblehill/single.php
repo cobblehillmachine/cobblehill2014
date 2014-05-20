@@ -9,8 +9,7 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<div id="content" class="site-content" role="main">
+<div class="cont blog-cont">
 			<?php
 				// Start the Loop.
 				while ( have_posts() ) : the_post();
@@ -31,10 +30,8 @@ get_header(); ?>
 					}
 				endwhile;
 			?>
-		</div><!-- #content -->
-	</div><!-- #primary -->
+</div>
 
 <?php
-get_sidebar( 'content' );
-get_sidebar();
+
 get_footer();

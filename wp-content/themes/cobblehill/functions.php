@@ -575,3 +575,9 @@ function create_post_type() {
 if ( function_exists( 'add_image_size' ) ) { 
 	add_image_size( 'testimonial-bg', 450, 430, true ); //(cropped)
 }
+
+function trim_excerpt($text) {
+     $text = str_replace('[&hellip;]', '&hellip;', $text);
+     return $text;
+    }
+add_filter('get_the_excerpt', 'trim_excerpt');
