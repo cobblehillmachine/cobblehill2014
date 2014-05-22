@@ -59,11 +59,11 @@ $(window).scroll(function() {
         if (sT >= 10) {
             $('#header').addClass('scrolled');
 			$('#header .black').hide();
-			$('#header .white').show();
+			$('#header .white').css({'display':'block'});
 			//$('#cat-cont').css({'position': 'fixed', 'top': 77});
         }else {
             $('#header').removeClass('scrolled');
-			$('#header .black').show();
+			$('#header .black').css({'display':'block'});
 			$('#header .white').hide();
 			//$('#cat-cont').css({'position': 'relative', 'top': 0});
         }
