@@ -78,19 +78,25 @@ function twentyfourteen_post_nav() {
 	if ( ! $next && ! $previous ) {
 		return;
 	}
+	  $previous_post = get_previous_post();
+	  $next_post = get_next_post();
+	  $prev_value = get_post_meta( $previous_post->ID, 'tagline', $single = true);
+	  $next_value = get_post_meta( $next_post->ID, 'tagline', $single = true);
 
 	?>
-	<nav class="navigation post-navigation cont row" role="navigation">
-		<div class="nav-links">
-			<?php
-			if ( is_attachment() ) :
-				previous_post_link( '%link', __( '<span class="meta-nav">Published In</span>%title', 'twentyfourteen' ) );
-			else :
-				previous_post_link( '%link', __( '%title<h2>'.the_field('tagline').'</h2>', 'twentyfourteen' ) );
-				next_post_link( '%link', __( '<h5>%title</h5>', 'twentyfourteen' ) );
-			endif;
-			?>
-		</div><!-- .nav-links -->
+	<nav class="navigation post-navigation cont" role="navigation">
+		<div class="mid-cont">
+			<div class="nav-links">
+				<?php
+				if ( is_attachment() ) :
+					previous_post_link( '%link', __( '<span class="meta-nav">Published In</span>%title', 'twentyfourteen' ) );
+				else :
+					previous_post_link( '%link', __( '<div class="arrow"></div><div class="post-info"><h5>%title</h5><h2>'.$prev_value.'</h2></div>', 'twentyfourteen' ) );
+					next_post_link( '%link', __( '<div class="arrow"></div><div class="post-info"><h5>%title</h5><h2>'.$next_value.'</h2></div>', 'twentyfourteen' ) );
+				endif;
+				?>
+			</div><!-- .nav-links -->
+		</div>
 	</nav><!-- .navigation -->
 	<?php
 }

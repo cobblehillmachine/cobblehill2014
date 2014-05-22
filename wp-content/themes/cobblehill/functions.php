@@ -581,3 +581,14 @@ function trim_excerpt($text) {
      return $text;
     }
 add_filter('get_the_excerpt', 'trim_excerpt');
+
+function add_class_next_post_link($html){
+    $html = str_replace('<a','<a class="next"',$html);
+    return $html;
+}
+add_filter('next_post_link','add_class_next_post_link',10,1);
+function add_class_previous_post_link($html){
+    $html = str_replace('<a','<a class="prev"',$html);
+    return $html;
+}
+add_filter('previous_post_link','add_class_previous_post_link',10,1);

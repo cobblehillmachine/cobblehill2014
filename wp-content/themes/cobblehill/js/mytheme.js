@@ -25,15 +25,17 @@ $(window).load(function() {
 
 $(document).ready(function() {
 	fadeNavitems();
-	$('#nav .close').click(function() {
-		$('#nav').animate({'top':-380 +'px'}, 500, 'swing');
-		$('#nav ul li').hide();
-	});
 	$('.page-header a').addClass('button white');
 	colorTransition();
 	setInputFieldFunctions();
 	$('*').removeAttr( "title" );
-
+	$('input[type="checkbox"]').addClass('customCheckbox');
+	$('.customCheckbox').iCheck({
+	    checkboxClass: 'icheckbox_minimal',
+	    radioClass: 'iradio_minimal',
+	    increaseArea: '20%' // optional
+	});
+	loadMap();
 
 });
 
@@ -83,16 +85,26 @@ function fadeNavitems() {
    var lis = $('#nav ul li').hide();          
 	$('.hamburger').click(function() {
 		$('#nav').animate({'top':0 +'px'}, 500, 'swing');
+		var winH = $(document).height();
+		
 		    var i = 0;   
 		setTimeout(function() {
 		(function displayImages() {
 		        lis.eq(i++).fadeIn(200, displayImages);
 		     })();
 		}, 500); 
+		if ($(window).width() < 1000) {
+			$('#nav').css({'height': winH});
+		}
 	}); 
 
 	$('#cat-cont .cat-sort').click(function() {
 		$('#cat-cont .cat-list').slideToggle();
+	});
+	$('#nav .close').click(function() {
+		$('#nav').animate({'top':-380 +'px'}, 500, 'swing');
+		$('#nav ul li').hide();
+		$('#nav').css({'height': 'auto'});
 	});
 }
 
@@ -144,9 +156,60 @@ function colorTransition() {
 	},function() {
 		$(this).animate({'color': '#231F20'},300);
 	});
+	$('#post-nav .nav-links a').hover(function() { 
+		var colors = ["#ee3823","#fdb818","#2ba0a3"];  
+		var rand = Math.floor(Math.random()*colors.length);
+		$(this).animate({'color': colors[rand]}, 300);
+		$(this).children('.arrow').animate({'background-color': colors[rand]});
+	},function() {
+		$(this).animate({'color': '#231F20'},300);
+		$(this).children('.arrow').animate({'background-color': '#231F20'});
+	});
 	
 }
 
 function scrollToHome() {
 	$('body').scrollTo($('#section1'), 1000 );
 }
+
+function loadMap() {
+	google.maps.event.addDomListener(window, 'load', init);
+ 
+     function init() {
+		var myLatlng = new google.maps.LatLng(32.787508,-79.929562);
+		
+         var mapOptions = {
+             zoom: 16,
+			 scaleControl: false,
+			 scrollwheel: false,
+			 zoomControl: false,
+			 panControl:false,
+			 streetViewControl: false,
+			 mapTypeControl:false,
+             center: myLatlng,
+             styles: [{featureType:"landscape",stylers:[{saturation:-100},{lightness:65},{visibility:"on"}]},{featureType:"poi",stylers:[{saturation:-100},{lightness:51},{visibility:"simplified"}]},{featureType:"road.highway",stylers:[{saturation:-100},{visibility:"simplified"}]},{featureType:"road.arterial",stylers:[{saturation:-100},{lightness:30},{visibility:"on"}]},{featureType:"road.local",stylers:[{saturation:-100},{lightness:40},{visibility:"on"}]},{featureType:"transit",stylers:[{saturation:-100},{visibility:"simplified"}]},{featureType:"administrative.province",stylers:[{visibility:"off"}]/**/},{featureType:"administrative.locality",stylers:[{visibility:"off"}]},{featureType:"administrative.neighborhood",stylers:[{visibility:"on"}]/**/},{featureType:"water",elementType:"labels",stylers:[{visibility:"on"},{lightness:-25},{saturation:-100}]},{featureType:"water",elementType:"geometry",stylers:[{hue:"#ffff00"},{lightness:-25},{saturation:-97}]}]
+         };
+
+         var mapElement = document.getElementById('map');
+         var map = new google.maps.Map(mapElement, mapOptions);
+		var image = new google.maps.MarkerImage('/wp-content/themes/cobblehill/images/map-pin.png');
+		var marker = new google.maps.Marker({
+		      position: map.getCenter(),
+		      map: map,
+		      title: 'Hello World!',
+			  icon: image
+		  });
+		var center;
+		function calculateCenter() {
+		  center = map.getCenter();
+		}
+		google.maps.event.addDomListener(map, 'idle', function() {
+		  calculateCenter();
+		});
+		google.maps.event.addDomListener(window, 'resize', function() {
+		  map.setCenter(center);
+		});
+     }
+    
+}
+

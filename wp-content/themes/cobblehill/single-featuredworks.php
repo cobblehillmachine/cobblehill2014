@@ -69,10 +69,14 @@
 			</div>
 		</div>
 	</div>
-	<div id="post-nav" class="cont">	
+	<div id="post-nav" class="cont row">	
 			<?php twentyfourteen_post_nav(); ?>
-			 <?php previous_posts_link('&laquo; Newer') ?>
-			    <?php next_posts_link('Older &raquo;') ?>
+			
+
+	
+			
+			 <!-- <?php //previous_posts_link('&laquo; Newer') ?>
+			 			    <?php// next_posts_link('Older &raquo;') ?> -->
 	
 	</div>
 	
