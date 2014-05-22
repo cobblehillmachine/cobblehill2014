@@ -40,6 +40,8 @@
 	<div class="mid-cont">
 		<h5 class="form-title">contact us today</h5>
 		<?php echo do_shortcode('[contact-form-7 id="4" title="Contact form 1"]'); ?>
+		<input id="checkbox1" class="css-checkbox" type="checkbox" checked="checked">
+		<label class="css-label lite-green-check" name="checkbox1_lbl" for="checkbox1">Green Check</label>
 	</div>
 </div>
 

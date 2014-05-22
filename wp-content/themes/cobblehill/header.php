@@ -44,29 +44,30 @@
 </head>
 
 <body <?php body_class(); ?> id="<?php echo  strtolower(str_replace(' ','-',get_the_title())); ?>">
-	<div id="nav">
-		<div class="mid-cont">
-			<a class="logo" href="/"><img alt="" src="<?php echo get_template_directory_uri(); ?>/images/logo-white.png" /></a>
-			<div class="close"><img alt="" src="<?php echo get_template_directory_uri(); ?>/images/white-x.png" /></div>
+	<div id="wrapper">
+		<div id="nav">
+			<div class="mid-cont">
+				<a class="logo" href="/"><img alt="" src="<?php echo get_template_directory_uri(); ?>/images/logo-white.png" /></a>
+				<div class="close"><img alt="" src="<?php echo get_template_directory_uri(); ?>/images/white-x.png" /></div>
 		
-			<?php $walker = new Menu_With_Description; ?>
-			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'walker' => $walker ) ); ?>
-		</div>
-	</div>
-	<div id="header">
-		<div class="mid-cont">
-			<a class="logo" href="/"><img alt="" class="black" src="<?php echo get_template_directory_uri(); ?>/images/logo.png" /> <img alt="" class="white hidden" src="<?php echo get_template_directory_uri(); ?>/images/logo-white.png" /></a>
-			<div class="hamburger"><img alt="" class="black" src="<?php echo get_template_directory_uri(); ?>/images/hamburger-icon.png" /><img alt="" class="white hidden" src="<?php echo get_template_directory_uri(); ?>/images/hamburger-white-icon.png" /></div>
-		</div>
-
-	</div>
-	<div id="main-wrap" class="cont">
-		<?php if(is_home() || is_single() && !is_singular( 'featuredworks' )  || is_category() ) { ?>
-			<div id="cat-cont" class="black-bg cont">
-				<div class="mid-cont">
-					<h1>What's New</h1>
-					<div class="cat-sort hidden">SORT</div>
-					 <div class="cat-list"><?php $categories = wp_list_categories(array('child_of' => 1 , 'order' => 'ASC', 'title_li'=>'', 'hide_empty' => 0)); echo $categories; ?></div>
-				</div>
+				<?php $walker = new Menu_With_Description; ?>
+				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'walker' => $walker ) ); ?>
 			</div>
-		<?php } ?>
+		</div>
+		<div id="header">
+			<div class="mid-cont">
+				<a class="logo" href="/"><img alt="" class="black" src="<?php echo get_template_directory_uri(); ?>/images/logo.png" /> <img alt="" class="white hidden" src="<?php echo get_template_directory_uri(); ?>/images/logo-white.png" /></a>
+				<div class="hamburger"><img alt="" class="black" src="<?php echo get_template_directory_uri(); ?>/images/hamburger-icon.png" /><img alt="" class="white hidden" src="<?php echo get_template_directory_uri(); ?>/images/hamburger-white-icon.png" /></div>
+			</div>
+
+		</div>
+		<div id="main-wrap" class="cont">
+			<?php if(is_home() || is_single() && !is_singular( 'featuredworks' )  || is_category() ) { ?>
+				<div id="cat-cont" class="black-bg cont">
+					<div class="mid-cont">
+						<h1>What's New</h1>
+						<div class="cat-sort hidden">SORT</div>
+						 <div class="cat-list"><?php $categories = wp_list_categories(array('child_of' => 1 , 'order' => 'ASC', 'title_li'=>'', 'hide_empty' => 0)); echo $categories; ?></div>
+					</div>
+				</div>
+			<?php } ?>

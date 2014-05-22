@@ -1,3 +1,7 @@
+$(window).bind('load', function() {
+   $('#wrapper').fadeIn('slow');
+});
+
 $(window).load(function() {
 	$('#project-slider ul.slides img, #story-slider ul.slides img').each(function() {
 		$(this).wrapAll('<li></li>');
@@ -5,13 +9,17 @@ $(window).load(function() {
 	if ($(window).width() > 767) {
 	  $('#project-slider .flexslider').flexslider({
 	    animation: "slide",
-		directionNav: false
+		directionNav: false,
+		useCSS: false
 	  });
 	}
 	  $('#story-slider .flexslider, #home-slider .flexslider, #testimonial-slider .flexslider').flexslider({
 	    animation: "slide",
 		directionNav: false,
-		touch: true
+		touch: true,
+		pauseOnAction: true, //Boolean: Pause the slideshow when interacting with control elements, highly recommended.
+		pauseOnHover: false, //Boolean: Pause the slideshow when hovering over slider, then resume when no longer hovering
+		useCSS: false //{NEW} Boolean: Slider will use CSS3 transitions if available
 	  });
 });
 
@@ -33,7 +41,8 @@ $(window).resize(function() {
 	if ($(window).width() > 767) {
 	  $('.flexslider').flexslider({
 	    animation: "slide",
-		directionNav: false
+		directionNav: false,
+		useCSS: false
 	  });
 	} else {
 		//$('.flexslider').stop().flexslider();

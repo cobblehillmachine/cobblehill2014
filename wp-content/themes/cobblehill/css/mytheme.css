@@ -27,7 +27,7 @@ mark {background:#fff;}
 * {box-sizing:border-box; -webkit-box-sizing:border-box; -moz-box-sizing:border-box;}
 *:focus {outline:none;}
 
-.wpcf7-list-item-label {  
+/*.wpcf7-list-item-label {  
     display: inline-block;  
     cursor: pointer;  
     position: relative;  
@@ -39,25 +39,63 @@ input[type="checkbox"] {display:none;}
 .wpcf7-list-item-label:before {  
     content: "";  
     display: inline-block;  
-  
     width: 16px;  
     height: 16px;  
-  
     margin-right: 10px;  
     position: absolute;  
     left: 0;  
-    /*bottombottom: 1px;  */
+    bottombottom: 1px;  
     background-color: #279092;  
 
 }
 
 
-.first input[type="checkbox"]:checked + .wpcf7-list-item-label:before {  
+input[type="checkbox"]:checked + .wpcf7-list-item-label:before {  
     content: "\2713";  
     font-size: 15px;  
     color: #000;  
     text-align: center;  
     line-height: 15px;  
+}*/
+
+label {
+-webkit-touch-callout: none;
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+}
+
+input[type=checkbox].css-checkbox {
+	  position: absolute; 
+    overflow: hidden; 
+    clip: rect(0 0 0 0); 
+    height:1px; 
+    width:1px; 
+    margin:-1px; 
+    padding:0;
+    border:0;
+}
+
+input[type=checkbox].css-checkbox + label.css-label {
+	padding-left:20px;
+	height:15px; 
+	display:inline-block;
+	line-height:15px;
+	background-repeat:no-repeat;
+	background-position: 0 0;
+	font-size:15px;
+	vertical-align:middle;
+	cursor:pointer;
+}
+
+input[type=checkbox].css-checkbox:checked + label.css-label {
+	background-position: 0 -15px;
+}
+
+.css-label{
+	background-image:url(http://csscheckbox.com/checkboxes/dark-check-green.png);
 }
 
 
@@ -109,7 +147,7 @@ input[type="checkbox"] {display:none;}
 #section2 .cta:hover h3 {margin-top:185px;}
 #cta-cont .cta span {font:normal 14px 'roboto_slabregular'; width:100%; display:inline-block; margin-top:8px;}
 #cta-cont .cta .description .sep {height:3px; width:12px; display:inline-block; background:#231f20;}
-#home-slider .featured-info {position:absolute; top:0; background:#fff; max-width:515px; width:100%; margin:2% 0 0 25px;}
+#home-slider .featured-info {position:absolute; top:0; background:#fff; max-width:515px; width:100%; margin:30% 0 0 25px;}
 #home-slider .title-header h5 {color:#fff; background:#231f20; margin:0; padding:10px 25px;}
 #home-slider .featured-info .info-cont {padding:30px 25px;}
 #home-slider .featured-info h5, #home-slider .featured-info h2 {margin-bottom:0;}
@@ -169,12 +207,14 @@ a[href^="http://maps.google.com/maps"], .gmnoprint a, .gmnoprint span {display:n
 #contact .black-bg h5 {margin-bottom:3px;}
 #contact .black-bg .social-cont {margin-top:30px;}
 #contact-form {padding:75px 0;}
-#contact-form form {padding:30px 25px 30px 0; border:2px solid #231f20; float:left; width:100%;}
+#contact-form form {padding:30px 25px; border:2px solid #231f20; float:left; width:100%;}
 #contact-form h5.form-title {background:#2ba0a3; position:absolute; margin:-7px 0 0 30px; padding:0 2px 0 4px;}
 #contact-form .left-cont {float:left;}
 #contact-form input, #contact-form textarea {margin-bottom:15px;}
 #contact-form .checkbox {margin-top:20px;}
 #contact-form span.wpcf7-list-item {margin:0 0 15px 0; float:left; position:relative;}
+#contact-form div.wpcf7-validation-errors {border:none; float:left; width:100%; text-align:center; font-size:12px; color:#b93121; border:2px solid #b93121; padding:20px 25px; text-transform:uppercase; margin:0;}
+#contact-form span.wpcf7-not-valid-tip {border:2px solid #b93121;}
 
 /*BLOG*/
 #cat-cont {padding:55px 0 15px 0;}
@@ -199,7 +239,7 @@ a[href^="http://maps.google.com/maps"], .gmnoprint a, .gmnoprint span {display:n
 .mid-cont {position:relative; width:85%; margin:auto;}
 .center-cont {position:relative; margin:auto;}
 .desktop, #section2 .cta:hover .description {display:block;}
-.hidden, .mobile, .mobile-img, .btn-mobile {display:none;}
+.hidden, .mobile, .mobile-img, .btn-mobile, #wrapper {display:none;}
 .last, .flex-control-nav li:last-child a, .social-icon:last-child {margin-right:0;}
 .cont, #nav .menu-main-nav-container, #contact-form .checkbox {position:relative; float:left; width:100%;}
 .left, .logo {float:left;}
@@ -233,7 +273,8 @@ h5, #services-cont .service .service-list ul li, #cat-cont .cat-list li a {font-
 /*FONTS*/
 .thin, .headline, #section2 .header span, h1 {font-family: "proxima-nova",sans-serif; font-style: normal; font-weight: 100;}
 .light, .home-tagline, h2, #single-project #row1 .box-text, .testimonial-cont .testimonial, #contact .black-bg, .blog-cont .entry-title {font-family: "proxima-nova",sans-serif; font-style: normal; font-weight: 300; letter-spacing:1.5px;}
-.semi-bold, #nav li a, h3, h5, .button, .page-header a, #services-cont .service .service-list ul li, #row4 .box, #our-story .blue a, input[type="submit"], #cat-cont .cat-list li a, #cat-cont .cat-sort { font-family: "proxima-nova",sans-serif; font-style: normal; font-weight: 600; letter-spacing:2px;}
+.semi-bold, #nav li a, h3, h5, .button, .page-header a, #services-cont .service .service-list ul li, #row4 .box, #our-story .blue a, input[type="submit"], #cat-cont .cat-list li a, #cat-cont .cat-sort, 
+#contact-form div.wpcf7-validation-errors { font-family: "proxima-nova",sans-serif; font-style: normal; font-weight: 600; letter-spacing:2px;}
 .robotoregular, .testimonial-cont .author span, #home-slider .featured-info .info-cont .sub-title {font-family: 'roboto_slabregular';}
 
 /*RETINA*/
@@ -331,7 +372,7 @@ h5, #services-cont .service .service-list ul li, #cat-cont .cat-list li a {font-
 	#map {height:400px;}
 	#contact .black-bg  {font-size:22px;}
 	#contact .page-header {padding:40px 0 30px;}
-	#contact-form form .left-cont, #contact-form form .right-cont {padding-left:25px;}
+	#contact-form form .right-cont {padding-left:25px;}
 	#contact-form .checkbox {margin-top:10px;}
 	#contact-form .checkbox p {margin-bottom:5px;}
 	/*BLOG*/
@@ -355,7 +396,7 @@ h5, #services-cont .service .service-list ul li, #cat-cont .cat-list li a {font-
 	#single-project #row1 .box-text, #our-story .blue {padding:50px 25px;}
 	h1 {font-size:28px;}
 	h2 {font-size:26px; line-height:30px;}
-	.paragraph:nth-child(2n+1) {padding:0;}
+	.paragraph:nth-child(2n+1), #contact-form form .right-cont {padding:0;}
 	#story-slider .flexslider, .paragraph, #contact .black-bg {text-align:center;}
 	#story-slider .flex-control-nav {margin-top:20px; width:160px; float:none; display:inline-block;}
 	#story-slider  .flex-control-nav li a {border-color:#231f20;}
