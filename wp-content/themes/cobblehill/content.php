@@ -26,7 +26,7 @@
 		<?php if ( in_array( 'category', get_object_taxonomies( get_post_type() ) ) && twentyfourteen_categorized_blog() ) : ?>
 			<div class="entry-meta">
 				<span class="cat-links button">Posted in <?php echo get_the_category_list( _x( ', ', 'Used between list items, there is a space after the comma.', 'twentyfourteen' ) ); ?></span>
-				<a class="button post-btn" href="<?php the_permalink(); ?>">view post</a>
+				<?php if (!is_single()) { ?><a class="button post-btn" href="<?php the_permalink(); ?>">view post</a><?php } ?>
 			</div>
 		<?php endif; ?>
 	</div>

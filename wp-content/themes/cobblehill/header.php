@@ -48,8 +48,8 @@
 	<div id="wrapper">
 		<div id="nav">
 			<div class="mid-cont">
-				<a class="logo" href="/"><img alt="" src="<?php echo get_template_directory_uri(); ?>/images/logo-white.png" /></a>
-				<div class="close"><img alt="" src="<?php echo get_template_directory_uri(); ?>/images/white-x.png" /></div>
+				<a class="logo hidden" href="/"><img alt="" src="<?php echo get_template_directory_uri(); ?>/images/logo-white.png" /></a>
+				<div class="close hidden"><img alt="" src="<?php echo get_template_directory_uri(); ?>/images/white-x.png" /></div>
 		
 				<?php $walker = new Menu_With_Description; ?>
 				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'walker' => $walker ) ); ?>

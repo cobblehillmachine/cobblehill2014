@@ -2,7 +2,7 @@
 
 <div id="bg-video" class="cont desktop">
 	<div class="home-tagline desktop"><?php the_field('home_tagline'); ?></div>
-	<div id="home-scroll" class="desktop" onclick="scrollToHome();"><img alt="" src="<?php echo get_template_directory_uri(); ?>/images/scroll-icon.png" /></div>
+	<div id="home-scroll" class="desktop" onclick="scrollToHome();"><img class="pointer" alt="" src="<?php echo get_template_directory_uri(); ?>/images/scroll-icon.png" /></div>
 	<div class="videoWrapper">
 		<video autoplay="true" loop="true">
 		  <source src="<?php echo get_template_directory_uri(); ?>/videos/cobble-hill-video.mp4" type="video/mp4">
@@ -22,8 +22,8 @@
 </div>
 <div id="section2" class="cont">
 	<div class="header cont">
-		<div class="mid-cont">
-			<span>Our Specialties</span>
+		<div class="center-cont">
+			<span class="col">Our Specialties</span>
 			<a class="button black" href="/services">what we do</a>
 		</div>
 	</div>
