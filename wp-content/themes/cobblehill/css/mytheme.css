@@ -24,6 +24,7 @@ mark {background:#fff;}
 
 /*HEADER*/
 #header {position:fixed; top:0; width:100%; padding:40px 0; z-index:1; }
+.logo {margin-top:5px;}
 #header.scrolled {background:#231f20; padding:25px 0;}
 #header.scrolled .logo {margin-top:4px;}
 #nav {background:#231f20; position:fixed; width:100%; top:-380px; z-index:2; padding:40px 0 0 0;}
@@ -112,11 +113,15 @@ mark {background:#fff;}
 #row4 .strategy {background:url(../images/strategy-icon.png) no-repeat center 40px #2ba0a3;}
 #row4 .creative {background:url(../images/creative-icon.png) no-repeat center 40px #ee3823;}
 #row4 .development {background:url(../images/development-icon.png) no-repeat center 40px #fdb818;}
-#post-nav {padding:40px 0 15px 0;}
-#post-nav .nav-links .next {text-align:right;}
-#post-nav .nav-links .prev .arrow {background:url(../images/arrow-left-white-bg.png) no-repeat left center #231f20; float:left; width:9px; height:16px; margin:20px 35px 0 0;}
-#post-nav .nav-links .next .arrow {background:url(../images/arrow-right-white-bg.png) no-repeat left center #231f20; float:right; width:9px; height:16px; margin:20px 0 0 35px;}
-#post-nav .nav-links h5 {margin-bottom:0;}
+#post-nav .prev, #post-nav .next {padding:35px 0 40px 0;}
+#post-nav .nav-links a {float:left; width:50%;}
+#post-nav .nav-links .next {text-align:right; float:right;}
+#post-nav .nav-links .arrow {position:absolute; margin-top:15px; width:9px; height:16px;} 
+#post-nav .nav-links .prev .arrow {background:url(../images/arrow-left-white-bg.png) no-repeat left center #231f20; left:0;}
+#post-nav .nav-links .next .arrow {background:url(../images/arrow-right-white-bg.png) no-repeat left center #231f20; right:0;}
+#post-nav .nav-links h5, #post-nav .nav-links h2 {margin-bottom:0;}
+#post-nav .nav-links .prev .post-info {padding-left:45px;}
+#post-nav .nav-links .next .post-info {padding-right:45px;}
 
 /*OUR STORY*/
 #our-story .blue {padding:95px 5%;}
@@ -149,7 +154,7 @@ a[href^="http://maps.google.com/maps"], .gmnoprint a, .gmnoprint span {display:n
 .icheckbox_minimal.checked {background-position: -18px 0;}
 
 /*BLOG*/
-#cat-cont {padding:55px 0 15px 0;}
+#cat-cont {padding:43px 0 15px 0;}
 #cat-cont h1 {max-width:300px; float:left;}
 #cat-cont .cat-list {float:right; width:506px; margin-top:30px;}
 #cat-cont .cat-list li a {float:left; color:#fff; margin-left:40px;}
@@ -162,6 +167,7 @@ a[href^="http://maps.google.com/maps"], .gmnoprint a, .gmnoprint span {display:n
 .blog-cont .entry-meta .cat-links {color:#8c8385; border-right:none; float:left;}
 .blog-cont .entry-meta .post-btn {float:left; max-width:140px;}
 .blog-cont .post-excerpt {display:inline-block; max-width:70%;}
+.blog-cont .post-excerpt a {text-decoration:underline;}
 .blog-cont .entry-title {font-size:36px;}
 #cat-cont .cat-sort {font-size:12px; float:right; margin-top:12px; cursor:pointer;}
 .blog-cont .post-excerpt img {width:100%; height:auto; max-width:650px; margin-bottom:20px;}
@@ -178,8 +184,8 @@ a[href^="http://maps.google.com/maps"], .gmnoprint a, .gmnoprint span {display:n
 .hidden, .mobile, .mobile-img, .btn-mobile, #wrapper {display:none;}
 .last, .flex-control-nav li:last-child a, .social-icon:last-child {margin-right:0;}
 .cont, #nav .menu-main-nav-container, #contact-form .checkbox {position:relative; float:left; width:100%;}
-.left, .logo, #post-nav .nav-links .prev, #post-nav .nav-links .post-info, #contact-form .left-cont, .paragraph:nth-of-type(2) .button {float:left;}
-.right, .hamburger, .close, #our-story .blue a, #post-nav .nav-links .next .post-info, .paragraph:nth-of-type(1) .button {float:right;}
+.left, .logo, #post-nav .nav-links .post-info, #contact-form .left-cont {float:left;}
+.right, .hamburger, .close, #our-story .blue a, #post-nav .nav-links .next .post-info {float:right;}
 .pointer, .hamburger, .close, input[type="submit"] {cursor:pointer;}
 .center, #nav .menu-main-nav-container, #featured-work .work .thumb, .latest-posts .latest {text-align:center;}
 .inline, #menu-main-nav, .page-header a {display:inline-block;}
@@ -199,8 +205,7 @@ h5, #services-cont .service .service-list ul li, #cat-cont .cat-list li a {font-
 .table {display:table; width:100%; height:100%;}
 .table-cell {display:table-cell; vertical-align:middle;}
 .row, #services-cont .service, #featured-work .work {border-top:3px solid #231f20;}
-.paragraph {width:50%; float:left;}
-.paragraph p {text-align:left;}
+.paragraph {width:50%; float:left; text-align:left;}
 .paragraph:nth-child(2n+1) {padding-right:25px;}
 .blue {background:#2ba0a3;}
 .black-bg, input[type="submit"]:hover {background:#231f20; color:#fff;}
@@ -233,7 +238,7 @@ h5, #services-cont .service .service-list ul li, #cat-cont .cat-list li a {font-
 .span_4, #footer .signup-cont, #section2 .header a, #section2 .cta, #row4 .box  {width:33.3333333333%; float:left;}
 .span_5, #footer .contact-cont, #contact-form .left-cont .wpcf7-form-control-wrap:nth-child(2), #contact-form .checkbox p {width:41.6666666667%; float:left;}
 .span_6, #footer .contact, #footer .address, #services-cont .service .service-info, #featured-work .work-info, #featured-work .work .thumb, #single-project #row1 .left, #single-project #row1 .right, #contact .black-bg .left, #contact .black-bg .right,
-#contact-form .left-cont, #contact-form .right-cont, #post-nav .nav-links a, .latest-posts .latest {width:50%; float:left;}
+#contact-form .left-cont, #contact-form .right-cont, .latest-posts .latest {width:50%; float:left;}
 .span_7, #contact-form .left-cont .wpcf7-form-control-wrap:nth-child(3), #contact-form .checkbox h5 {width:58.3333333333%; float:left;}
 .span_8 {width:66.6666666667%; float:left;}
 .span_9 {width:75.0%; float:left;}
@@ -279,13 +284,12 @@ h5, #services-cont .service .service-list ul li, #cat-cont .cat-list li a {font-
 	#footer .contact-cont .address {margin-bottom:15px;}
 	h1 {font-size:30px; line-height:34px;}
 	h2 {font-size:28px; line-height:32px;}
-	#section1 {padding:30px 0 50px;}
+	#section1 {padding:20px 0 50px;}
 	#main-wrap, #single-project .banner, #story-slider, #home-slider .featured-info {margin:0;}
 	.page-header {padding:55px 0 50px;}
 	#our-story .blue h5, #our-story .blue h2 {width:50%;}
 	#home-slider .featured-info {max-width:100%;}	
 	/*#HEADER*/
-	.logo {margin-top:5px;}
 	#nav {position:absolute;}
 	#menu-main-nav {height:auto;}
 	#nav li a:hover .sub {opacity:0; filter:alpha(opacity=0);}
@@ -298,6 +302,10 @@ h5, #services-cont .service .service-list ul li, #cat-cont .cat-list li a {font-
 	/*PROJECTS*/
 	#single-project #row1 .box-text {font-size:18px;}
 	.testimonial-cont .testimonial {font-size:20px;}
+	#post-nav .nav-links .prev {border-bottom:3px solid #231f20;}
+	#post-nav .nav-links .next {text-align:left;}
+	#post-nav .nav-links .next .arrow {left:0;}
+	#post-nav .nav-links .post-info {padding:0 0 0 25px !important; float:left !important;}
 	/*HOMEPAGE*/
 	#home-slider .flex-control-nav {width:160px; float:none; display:inline-block;}
 	#home-slider  .flex-control-nav li a {border-color:#231f20;}
@@ -319,10 +327,10 @@ h5, #services-cont .service .service-list ul li, #cat-cont .cat-list li a {font-
 
 @media screen and (max-width:767px) {
 	#footer .contact-cont, #footer .signup-cont, #footer .social-cont, #section2 .cta, #services-cont .service .icon, #services-cont .service .service-list, #services-cont .service .service-info, .button, #row4 .box, .paragraph, #our-story .blue h5, #our-story .blue h2,
-	#contact .black-bg .left, #contact .black-bg .right, #contact-form form .left-cont, #contact-form form .right-cont, .latest-posts .latest {width:100%;}
+	#contact .black-bg .left, #contact .black-bg .right, #contact-form form .left-cont, #contact-form form .right-cont, .latest-posts .latest, #post-nav .nav-links .post-info {width:100%;}
 	#section2 .header a, .desktop-img, #map, #contact .page-header, .btn-desktop {display:none !important;}
 	#cat-cont .cat-list, #contact-form div.wpcf7 img.ajax-loader {display:none;}
-	.mobile-img, .btn-mobile, #cat-cont .cat-sort {display:block;}
+	.mobile-img, .btn-mobile, #cat-cont .cat-sort, #section2 .cta .description {display:block;}
 	#footer .social-cont, #footer .contact-cont {margin-bottom:45px;}
 	#section2 .header span {margin-top:0;}
 	.page-header a, #our-story .blue a, #contact-form form .right-cont  {margin:15px 0 0; width:100%;}
@@ -350,15 +358,20 @@ h5, #services-cont .service .service-list ul li, #cat-cont .cat-list li a {font-
 	.blog-cont .entry-meta .cat-links {border-right:2px solid #231f20; border-bottom:none;}
 	#cat-cont {padding:30px 0 0 0;}
 	#cat-cont .cat-list {float:left; width:100%;}
-	#cat-cont .cat-list li a {float:left; width:100%; margin:0 0 25px 0; text-align:center;}
+	#cat-cont .cat-list li a {float:left; width:100%; margin:0 0 25px 0; text-align:right;}
 	#cat-cont .cat-list li a:hover {color:#fff !important; text-decoration:underline;}
 	.blog-cont .entry-title {font-size:32px;}
 	#contact-form {padding-top:25px;}
 	#contact-form .checkbox h5 {letter-spacing:1px;}
 	#contact-form span.wpcf7-list-item {margin:0 0 20px 0;}
 	#contact-form input[type="submit"] {margin:0;}
-	#post-nav .nav-links .next {margin-top:20px;}
+	/*#post-nav .nav-links .prev {margin-bottom:30px;}*/
 	.latest-posts .latest {padding:35px 25px;}
+	#home-slider .featured-info .info-cont {text-align:left;}
+	#section2 .cta {background-size: 100px auto !important;}
+	#section2 .cta h3 {margin-top:185px;}	
+	#post-nav .nav-links h2 {font-size:22px; line-height:24px;}
+	
 }
 
 @media screen and (max-width:479px) {
@@ -366,5 +379,4 @@ h5, #services-cont .service .service-list ul li, #cat-cont .cat-list li a {font-
 	.testimonial-cont .testimonial {font-size:16px;}
 	.testimonial-info .table-cell {padding-top:15px; vertical-align:top;}
 	#contact .black-bg {font-size:20px;}
-	#post-nav .nav-links .post-info {width:84%;}
 }

@@ -14,10 +14,12 @@
 		<div class="mid-cont">
 			<h5><?php the_title(); ?></h5>
 			<h1><span><?php the_field('page_headline'); ?></span></h1>
-			<div class="paragraph"><?php the_field('left_copy'); ?><a class="button" href="<?php the_field('link_1'); ?>"><?php the_field('link_1_title'); ?></a></div>
-			<div class="paragraph"><?php the_field('right_copy'); ?><a class="button" href="<?php the_field('link_2'); ?>"><?php the_field('link_2_title'); ?></a></div>
-			
-			
+			<div class="paragraph"><?php the_field('left_copy'); ?></div>
+			<div class="paragraph"><?php the_field('right_copy'); ?></div>
+			<p>
+			<a class="button" href="<?php the_field('link_1'); ?>"><?php the_field('link_1_title'); ?></a>
+			<a class="button" href="<?php the_field('link_2'); ?>"><?php the_field('link_2_title'); ?></a>
+			</p>
 		</div>
 	</div>
 	<div id="testimonial-slider" class="cont black-bg">

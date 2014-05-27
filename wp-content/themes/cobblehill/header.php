@@ -67,7 +67,7 @@
 				<div id="cat-cont" class="black-bg cont">
 					<div class="mid-cont">
 						<h1>What's New</h1>
-						<div class="cat-sort hidden">SORT</div>
+						<div class="cat-sort hidden">SORT BY</div>
 						 <div class="cat-list"><?php $categories = wp_list_categories(array('child_of' => 1 , 'order' => 'ASC', 'title_li'=>'', 'hide_empty' => 0)); echo $categories; ?></div>
 					</div>
 				</div>

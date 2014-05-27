@@ -70,14 +70,7 @@
 		</div>
 	</div>
 	<div id="post-nav" class="cont row">	
-			<?php twentyfourteen_post_nav(); ?>
-			
-
-	
-			
-			 <!-- <?php //previous_posts_link('&laquo; Newer') ?>
-			 			    <?php// next_posts_link('Older &raquo;') ?> -->
-	
+		<?php twentyfourteen_post_nav(); ?>
 	</div>
 	
 <?php get_footer(); ?>

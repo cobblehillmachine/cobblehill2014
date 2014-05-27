@@ -160,10 +160,10 @@ function colorTransition() {
 		var colors = ["#ee3823","#fdb818","#2ba0a3"];  
 		var rand = Math.floor(Math.random()*colors.length);
 		$(this).animate({'color': colors[rand]}, 300);
-		$(this).children('.arrow').animate({'background-color': colors[rand]});
+		$(this).children('.mid-cont').children('.arrow').animate({'background-color': colors[rand]});
 	},function() {
 		$(this).animate({'color': '#231F20'},300);
-		$(this).children('.arrow').animate({'background-color': '#231F20'});
+		$(this).children('.mid-cont').children('.arrow').animate({'background-color': '#231F20'});
 	});
 	
 }

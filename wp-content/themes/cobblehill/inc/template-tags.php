@@ -85,18 +85,16 @@ function twentyfourteen_post_nav() {
 
 	?>
 	<nav class="navigation post-navigation cont" role="navigation">
-		<div class="mid-cont">
-			<div class="nav-links">
-				<?php
-				if ( is_attachment() ) :
-					previous_post_link( '%link', __( '<span class="meta-nav">Published In</span>%title', 'twentyfourteen' ) );
-				else :
-					previous_post_link( '%link', __( '<div class="arrow"></div><div class="post-info"><h5>%title</h5><h2>'.$prev_value.'</h2></div>', 'twentyfourteen' ) );
-					next_post_link( '%link', __( '<div class="arrow"></div><div class="post-info"><h5>%title</h5><h2>'.$next_value.'</h2></div>', 'twentyfourteen' ) );
-				endif;
-				?>
-			</div><!-- .nav-links -->
-		</div>
+		<div class="nav-links">
+			<?php
+			if ( is_attachment() ) :
+				previous_post_link( '%link', __( '<span class="meta-nav">Published In</span>%title', 'twentyfourteen' ) );
+			else :
+				previous_post_link( '%link', __( '<div class="mid-cont"><div class="arrow"></div><div class="post-info"><h5>%title</h5><h2>'.$prev_value.'</h2></div></div>', 'twentyfourteen' ) );
+				next_post_link( '%link', __( '<div class="mid-cont"><div class="arrow"></div><div class="post-info"><h5>%title</h5><h2>'.$next_value.'</h2></div></div>', 'twentyfourteen' ) );
+			endif;
+			?>
+		</div><!-- .nav-links -->
 	</nav><!-- .navigation -->
 	<?php
 }
