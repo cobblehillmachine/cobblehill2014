@@ -178,8 +178,8 @@ a[href^="http://maps.google.com/maps"], .gmnoprint a, .gmnoprint span {display:n
 .hidden, .mobile, .mobile-img, .btn-mobile, #wrapper {display:none;}
 .last, .flex-control-nav li:last-child a, .social-icon:last-child {margin-right:0;}
 .cont, #nav .menu-main-nav-container, #contact-form .checkbox {position:relative; float:left; width:100%;}
-.left, .logo, #post-nav .nav-links .prev, #post-nav .nav-links .post-info, #contact-form .left-cont {float:left;}
-.right, .hamburger, .close, #our-story .blue a, #post-nav .nav-links .next .post-info {float:right;}
+.left, .logo, #post-nav .nav-links .prev, #post-nav .nav-links .post-info, #contact-form .left-cont, .paragraph:nth-of-type(2) .button {float:left;}
+.right, .hamburger, .close, #our-story .blue a, #post-nav .nav-links .next .post-info, .paragraph:nth-of-type(1) .button {float:right;}
 .pointer, .hamburger, .close, input[type="submit"] {cursor:pointer;}
 .center, #nav .menu-main-nav-container, #featured-work .work .thumb, .latest-posts .latest {text-align:center;}
 .inline, #menu-main-nav, .page-header a {display:inline-block;}
@@ -199,11 +199,13 @@ h5, #services-cont .service .service-list ul li, #cat-cont .cat-list li a {font-
 .table {display:table; width:100%; height:100%;}
 .table-cell {display:table-cell; vertical-align:middle;}
 .row, #services-cont .service, #featured-work .work {border-top:3px solid #231f20;}
-.paragraph {width:50%; float:left; text-align:left;}
+.paragraph {width:50%; float:left;}
+.paragraph p {text-align:left;}
 .paragraph:nth-child(2n+1) {padding-right:25px;}
 .blue {background:#2ba0a3;}
 .black-bg, input[type="submit"]:hover {background:#231f20; color:#fff;}
 .gray-bg {background:#f4f0ef;}
+.paragraph:nth-of-type(1) .button, .paragraph:nth-of-type(2) .button {margin:14px 0 0 0;}
 
 /*FONTS*/
 .thin, .headline, #section2 .header span, h1 {font-family: "proxima-nova",sans-serif; font-style: normal; font-weight: 100;}
@@ -269,7 +271,7 @@ h5, #services-cont .service .service-list ul li, #cat-cont .cat-list li a {font-
 	body {padding:0;}
 	.mobile {display:block;}
 	.desktop {display:none;}
-	.mid-cont {width:95%;}
+	.mid-cont {width:90%;}
 	.col {padding:0;}
 	.gray-bg, .black-bg {background:none;}
 	#nav li, #post-nav .nav-links a {width:100%;}
@@ -277,7 +279,7 @@ h5, #services-cont .service .service-list ul li, #cat-cont .cat-list li a {font-
 	#footer .contact-cont .address {margin-bottom:15px;}
 	h1 {font-size:30px; line-height:34px;}
 	h2 {font-size:28px; line-height:32px;}
-	#section1 {padding:60px 0;}
+	#section1 {padding:30px 0 50px;}
 	#main-wrap, #single-project .banner, #story-slider, #home-slider .featured-info {margin:0;}
 	.page-header {padding:55px 0 50px;}
 	#our-story .blue h5, #our-story .blue h2 {width:50%;}

@@ -14,10 +14,10 @@
 		<div class="mid-cont">
 			<h5><?php the_title(); ?></h5>
 			<h1><span><?php the_field('page_headline'); ?></span></h1>
-			<div class="paragraph"><?php the_field('left_copy'); ?></div>
-			<div class="paragraph"><?php the_field('right_copy'); ?></div>
-			<a class="button" href="<?php the_field('link_1'); ?>"><?php the_field('link_1_title'); ?></a>
-			<a class="button" href="<?php the_field('link_2'); ?>"><?php the_field('link_2_title'); ?></a>
+			<div class="paragraph"><?php the_field('left_copy'); ?><a class="button" href="<?php the_field('link_1'); ?>"><?php the_field('link_1_title'); ?></a></div>
+			<div class="paragraph"><?php the_field('right_copy'); ?><a class="button" href="<?php the_field('link_2'); ?>"><?php the_field('link_2_title'); ?></a></div>
+			
+			
 		</div>
 	</div>
 	<div id="testimonial-slider" class="cont black-bg">
@@ -65,7 +65,7 @@
 			?>
 		</div>
 	</div>
-	<div class="latest-posts cont">
+	<div class="latest-posts cont row">
 		<div class="center-cont">
 		    <?php $latest = new WP_Query('posts_per_page=2&post_type=post'); if ($latest->have_posts()) : ?>
 		    	<?php while ($latest->have_posts()) : $latest->the_post(); ?>
