@@ -8,7 +8,7 @@ a {text-decoration:none; color:#231f20; outline:0;}
 a img {border:0;}
 img {vertical-align:top; max-width:100%;}
 ul {list-style:none; padding:0; margin:0;}
-p {margin:0 0 25px 0; float:left; width:100%;}
+p {margin:0 0 25px 0; float:left; width:100%; line-height:26px;}
 ul, li, ol, fieldset {list-style:none; padding:0; margin:0; border:none;}
 input, select, textarea {-webkit-appearance:none; -moz-appearance:none; -webkit-border-radius:0px; -moz-border-radius:0px; border-radius:0px; font:normal 14px 'roboto_slablight'; background:#279092; border:none; padding:20px 25px; float:left;}
 textarea {resize:none; height:240px; width:100%;}
@@ -157,7 +157,7 @@ a[href^="http://maps.google.com/maps"], .gmnoprint a, .gmnoprint span {display:n
 .blog-cont article:first-child {background:none; border-top:none;}
 .blog-cont #infscr-loading {background:url(../images/preloader.gif) no-repeat center center; width:100% !important; height:30px; position:relative; float:left; margin-bottom:25px;}
 .blog-cont #infscr-loading img, .blog-cont .navigation {display:none !important;}
-.blog-cont .small-divider {display:inline-block; width:15px; height:3px; background:#231f20; margin:0 0 10px;}
+.small-divider {display:inline-block; width:15px; height:3px; background:#231f20; margin:0 0 10px;}
 .blog-cont .entry-meta {display:inline-block; margin-top:30px;}
 .blog-cont .entry-meta .cat-links {color:#8c8385; border-right:none; float:left;}
 .blog-cont .entry-meta .post-btn {float:left; max-width:140px;}
@@ -165,6 +165,9 @@ a[href^="http://maps.google.com/maps"], .gmnoprint a, .gmnoprint span {display:n
 .blog-cont .entry-title {font-size:36px;}
 #cat-cont .cat-sort {font-size:12px; float:right; margin-top:12px; cursor:pointer;}
 .blog-cont .post-excerpt img {width:100%; height:auto; max-width:650px; margin-bottom:20px;}
+.latest-posts .latest {padding:55px;}
+.latest-posts .latest .entry-title {font-size:24px; line-height:30px;}
+.latest-posts .latest .button {margin-top:10px; display:inline-block;}
 
 
 /*REUSABLE*/
@@ -178,7 +181,7 @@ a[href^="http://maps.google.com/maps"], .gmnoprint a, .gmnoprint span {display:n
 .left, .logo, #post-nav .nav-links .prev, #post-nav .nav-links .post-info, #contact-form .left-cont {float:left;}
 .right, .hamburger, .close, #our-story .blue a, #post-nav .nav-links .next .post-info {float:right;}
 .pointer, .hamburger, .close, input[type="submit"] {cursor:pointer;}
-.center, #nav .menu-main-nav-container, #featured-work .work .thumb {text-align:center;}
+.center, #nav .menu-main-nav-container, #featured-work .work .thumb, .latest-posts .latest {text-align:center;}
 .inline, #menu-main-nav, .page-header a {display:inline-block;}
 #main-wrap {margin-top:67px;}
 .videoWrapper {position: relative;padding-bottom: 56.25%; height: 0;}
@@ -192,7 +195,7 @@ h3 {font-size:16px; text-transform:uppercase;  float:left; width:100%; margin-bo
 h5, #services-cont .service .service-list ul li, #cat-cont .cat-list li a {font-size:12px; text-transform:uppercase; margin-top:0;}
 .button, .page-header a, #our-story .blue a, input[type="submit"] {border:2px solid #231f20; background:transparent; color:#231f20; padding:20px; width:290px; text-transform:uppercase; font-size:12px; border-color:#231f20; border-width:2px; text-align:center;}
 .button.black {border:2px solid #fff; background:#231f20; color:#fff;}
-.gradient {background-image:linear-gradient(#e5e5e5, #fff);}
+.gradient, .latest-posts .latest:first-child {background-image:linear-gradient(#e5e5e5, #fff);}
 .table {display:table; width:100%; height:100%;}
 .table-cell {display:table-cell; vertical-align:middle;}
 .row, #services-cont .service, #featured-work .work {border-top:3px solid #231f20;}
@@ -228,7 +231,7 @@ h5, #services-cont .service .service-list ul li, #cat-cont .cat-list li a {font-
 .span_4, #footer .signup-cont, #section2 .header a, #section2 .cta, #row4 .box  {width:33.3333333333%; float:left;}
 .span_5, #footer .contact-cont, #contact-form .left-cont .wpcf7-form-control-wrap:nth-child(2), #contact-form .checkbox p {width:41.6666666667%; float:left;}
 .span_6, #footer .contact, #footer .address, #services-cont .service .service-info, #featured-work .work-info, #featured-work .work .thumb, #single-project #row1 .left, #single-project #row1 .right, #contact .black-bg .left, #contact .black-bg .right,
-#contact-form .left-cont, #contact-form .right-cont, #post-nav .nav-links a {width:50%; float:left;}
+#contact-form .left-cont, #contact-form .right-cont, #post-nav .nav-links a, .latest-posts .latest {width:50%; float:left;}
 .span_7, #contact-form .left-cont .wpcf7-form-control-wrap:nth-child(3), #contact-form .checkbox h5 {width:58.3333333333%; float:left;}
 .span_8 {width:66.6666666667%; float:left;}
 .span_9 {width:75.0%; float:left;}
@@ -266,7 +269,7 @@ h5, #services-cont .service .service-list ul li, #cat-cont .cat-list li a {font-
 	body {padding:0;}
 	.mobile {display:block;}
 	.desktop {display:none;}
-	.mid-cont {width:90%;}
+	.mid-cont {width:95%;}
 	.col {padding:0;}
 	.gray-bg, .black-bg {background:none;}
 	#nav li, #post-nav .nav-links a {width:100%;}
@@ -314,7 +317,7 @@ h5, #services-cont .service .service-list ul li, #cat-cont .cat-list li a {font-
 
 @media screen and (max-width:767px) {
 	#footer .contact-cont, #footer .signup-cont, #footer .social-cont, #section2 .cta, #services-cont .service .icon, #services-cont .service .service-list, #services-cont .service .service-info, .button, #row4 .box, .paragraph, #our-story .blue h5, #our-story .blue h2,
-	#contact .black-bg .left, #contact .black-bg .right, #contact-form form .left-cont, #contact-form form .right-cont {width:100%;}
+	#contact .black-bg .left, #contact .black-bg .right, #contact-form form .left-cont, #contact-form form .right-cont, .latest-posts .latest {width:100%;}
 	#section2 .header a, .desktop-img, #map, #contact .page-header, .btn-desktop {display:none !important;}
 	#cat-cont .cat-list, #contact-form div.wpcf7 img.ajax-loader {display:none;}
 	.mobile-img, .btn-mobile, #cat-cont .cat-sort {display:block;}
@@ -353,6 +356,7 @@ h5, #services-cont .service .service-list ul li, #cat-cont .cat-list li a {font-
 	#contact-form span.wpcf7-list-item {margin:0 0 20px 0;}
 	#contact-form input[type="submit"] {margin:0;}
 	#post-nav .nav-links .next {margin-top:20px;}
+	.latest-posts .latest {padding:35px 25px;}
 }
 
 @media screen and (max-width:479px) {
