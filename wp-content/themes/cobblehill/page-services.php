@@ -18,7 +18,7 @@
 								if ($thumbnail) (string)$thumbnail = $thumbnail[0];
 							} ?>
 				<div class="service cont">
-					<div class="icon <?php echo strtolower(str_replace(' ','-',get_the_title())); ?>" style="background: url('<?php echo $thumbnail; ?>') no-repeat center 100px <?php the_field('background_color'); ?>"></div>
+					<div class="icon <?php echo strtolower(str_replace(' ','-',get_the_title())); ?>" style="background: url('<?php echo $thumbnail; ?>') no-repeat center 112px <?php the_field('background_color'); ?>"></div>
 					<div class="service-info">
 						<h3><?php the_field('sub_title'); ?></h3>
 						<h2><?php the_field('service_description'); ?></h2>

@@ -119,7 +119,7 @@ function colorTransition() {
 	originalBorder = $('.button').css('border-color');
 	originalBtnBg = $('.button').css('background-color'); 
 	originalBtnColor = $('.button').css('color');
-	$('#footer .contact a, #cat-cont .cat-list li a').hover(function() { 
+	$('#footer .contact a, #cat-cont .cat-list li a, #contact .contact a').hover(function() { 
 		var colors = ["#ee3823","#fdb818","#2ba0a3"];  
 		var rand = Math.floor(Math.random()*colors.length);
 		$(this).animate({'color': colors[rand]}, 500);
@@ -161,7 +161,7 @@ function colorTransition() {
 	},function() {
 		$(this).animate({'color': '#231F20'},300);
 	});
-	$('#post-nav .nav-links a').hover(function() { 
+	$('#post-nav .nav-links a, .latest-posts .entry-title a').hover(function() { 
 		var colors = ["#ee3823","#fdb818","#2ba0a3"];  
 		var rand = Math.floor(Math.random()*colors.length);
 		$(this).animate({'color': colors[rand]}, 300);
