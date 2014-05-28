@@ -6,14 +6,18 @@ $(window).load(function() {
 	$('#project-slider ul.slides img, #story-slider ul.slides img').each(function() {
 		$(this).wrapAll('<li></li>');
 	});
+
 	if ($(window).width() > 767) {
-	  $('#project-slider .flexslider').flexslider({
-	    animation: "slide",
+		$('#story-slider .flexslider, #home-slider .flexslider, #testimonial-slider .flexslider, #project-slider .flexslider').flexslider({
+	    animation: "fade",
 		directionNav: false,
-		useCSS: false
+		touch: true,
+		pauseOnAction: true, //Boolean: Pause the slideshow when interacting with control elements, highly recommended.
+		pauseOnHover: false, //Boolean: Pause the slideshow when hovering over slider, then resume when no longer hovering
+		useCSS: false //{NEW} Boolean: Slider will use CSS3 transitions if available
 	  });
-	}
-	  $('#story-slider .flexslider, #home-slider .flexslider, #testimonial-slider .flexslider').flexslider({
+	} else {
+		$('#story-slider .flexslider, #home-slider .flexslider, #testimonial-slider .flexslider').flexslider({
 	    animation: "slide",
 		directionNav: false,
 		touch: true,
@@ -21,6 +25,8 @@ $(window).load(function() {
 		pauseOnHover: false, //Boolean: Pause the slideshow when hovering over slider, then resume when no longer hovering
 		useCSS: false //{NEW} Boolean: Slider will use CSS3 transitions if available
 	  });
+	}
+
 	$('#contact-form .ajax-loader').attr('src', '/wp-content/themes/cobblehill/images/preloader.gif');
 });
 
@@ -44,16 +50,7 @@ $(document).ready(function() {
 });
 
 $(window).resize(function() {
-	if ($(window).width() > 767) {
-	  $('.flexslider').flexslider({
-	    animation: "slide",
-		directionNav: false,
-		useCSS: false
-	  });
-	} else {
-		//$('.flexslider').stop().flexslider();
-		//$('#flexslider').removeClass('flexslider');
-	}
+
 
 });
 

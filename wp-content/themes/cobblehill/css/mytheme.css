@@ -107,7 +107,7 @@ mark {background:#fff;}
 .right {background:#e5e5e5;}
 #single-project #row1 .left, #single-project #row1 .right {float:none !important;}
 #single-project #row1 .box-text {text-align:center; font-size:24px; padding:0 6%;}
-.flex-control-nav {position:absolute; width:160px; left:calc(50% - 80px); margin-top:-65px;}
+.flex-control-nav {position:absolute; width:160px; left:calc(50% - 80px); bottom:50px; z-index:10;}
 .flex-control-nav li a {border:3px solid #fff; background:none; border-radius:15px; -webkit-border-radius:15px; -moz-border-radius:15px;  width:20px; height:20px; color:transparent; padding:5px; float:left; margin-right:15px; cursor:pointer;}
 .flex-control-nav li a.flex-active, #single-project .flex-control-nav li a:hover {background:#fff;}
 .testimonial-cont {text-align:center; color:#fff;}
@@ -131,6 +131,7 @@ mark {background:#fff;}
 #our-story .blue {padding:95px 5%;}
 #our-story .blue h5, #our-story .blue h2 {margin-bottom:5px; width:65%;}
 #our-story .blue a {margin-top:-20px;}
+#testimonial-slider h3 {margin-top:-40px;}
 
 /*CONTACT*/
 #contact .page-header {padding:70px 0 60px 0;}
@@ -195,6 +196,7 @@ a[href^="http://maps.google.com/maps"], .gmnoprint a, .gmnoprint span {display:n
 .pointer, .hamburger, .close, input[type="submit"] {cursor:pointer;}
 .center, #nav .menu-main-nav-container, #featured-work .work .thumb, .latest-posts .latest {text-align:center;}
 .inline, #menu-main-nav, .page-header a {display:inline-block;}
+.flexslider {z-index:0;}
 #main-wrap {margin-top:57px;}
 .videoWrapper {position: relative;padding-bottom: 56.25%; height: 0;}
 .videoWrapper iframe, .videoWrapper video {position: absolute;top: 0;left: 0;width: 100%;height:100%;}
@@ -322,11 +324,9 @@ h5, #services-cont .service .service-list ul li, #cat-cont .cat-list li a {font-
 	#section2 .cta {background-size: 100px auto !important;}
 	#section2 .cta h3 {margin-top:185px;}
 	/*STORY*/
-	#testimonial-slider .testimonial-info .table-cell {padding-top:15px; vertical-align:top;}
-	#testimonial-slider .flex-control-nav {margin-top:-40px; width:60%;}
-	#story-slider  .flex-control-nav li a {border-color:#231f20;}
-	#story-slider .flex-control-nav {margin-top:25px;}
-	#story-slider .flex-control-nav li a.flex-active, #story-slider .flex-control-nav li a:hover {background-color:#231f20;}
+	#testimonial-slider h3 {margin-top:-10px;}
+	#testimonial-slider .flex-control-nav {bottom:18px;}
+	
 	/*CONTACT*/
 	#map {height:400px;}
 	#contact .black-bg  {font-size:22px;}
@@ -390,9 +390,13 @@ h5, #services-cont .service .service-list ul li, #cat-cont .cat-list li a {font-
 	#home .btn-mobile .button {display:inline-block;}
 	#section2 .cta .description {opacity:1; filter:alpha(opacity=0);}
 	.flex-control-nav li a {border-color:#231f20;}
-	.flexslider {text-align:center; padding-bottom:30px;}
+	#testimonial-slider .flex-control-nav li a {border-color:#fff;}
+	#home-slider .flexslider {text-align:center; padding-bottom:30px;}
 	.flex-control-nav {width:160px; float:none; display:inline-block; position:static; margin-top:0;}
 	.button, .page-header a, #our-story .blue a, input[type="submit"] {min-width:0;}
+	#story-slider  .flex-control-nav li a {border-color:#231f20;}
+	#story-slider .flex-control-nav {margin-top:25px;}
+	#story-slider .flex-control-nav li a.flex-active, #story-slider .flex-control-nav li a:hover {background-color:#231f20;}
 	
 }
 
