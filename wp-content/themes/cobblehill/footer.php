@@ -20,7 +20,7 @@
 					</div>
 					<div class="contact">
 						<?php the_field('phone', 'user_1'); ?></br>
-						<a href="mailto:<?php the_field('contact_email', 'user_1'); ?>" target="_blank"><?php the_field('contact_email', 'user_1'); ?></a>
+						<a href="mailto:<?php the_field('contact_email', 'user_1'); ?>"><?php the_field('contact_email', 'user_1'); ?></a>
 					</div>
 				</div>
 				<div class="social-cont">

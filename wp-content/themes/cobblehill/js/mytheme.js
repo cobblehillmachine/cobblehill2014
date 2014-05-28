@@ -21,6 +21,7 @@ $(window).load(function() {
 		pauseOnHover: false, //Boolean: Pause the slideshow when hovering over slider, then resume when no longer hovering
 		useCSS: false //{NEW} Boolean: Slider will use CSS3 transitions if available
 	  });
+	$('#contact-form .ajax-loader').attr('src', '/wp-content/themes/cobblehill/images/preloader.gif');
 });
 
 $(document).ready(function() {
@@ -36,12 +37,9 @@ $(document).ready(function() {
 	    increaseArea: '20%' // optional
 	});
 	loadMap();
-	$('#section2 .cta').each(function() {
-		$(this).on({
-			mouseenter: function(){$(this).children('.description').fadeIn('fast'); $(this).css({'background-size': 100}); $(this).children('h3').css({'margin-top': 185});},
-			mouseleave: function() {$(this).children('.description').fadeOut('fast'); $(this).css({'background-size': 'auto'}); $(this).children('h3').css({'margin-top': 225});}
-		});
-	}); 
+	
+    $('#contact-form .ajax-loader').attr('src', '/wp-content/themes/cobblehill/images/preloader.gif');
+  
 
 });
 
@@ -171,6 +169,16 @@ function colorTransition() {
 	},function() {
 		$(this).animate({'color': '#231F20'},300);
 		$(this).children('.mid-cont').children('.arrow').animate({'background-color': '#231F20'});
+	});
+	var colors = ["#ee3823","#fdb818","#2ba0a3"];  
+	var rand = Math.floor(Math.random()*colors.length);
+	$('#cat-cont .current-menu-item a').css({'color': colors[rand]});
+	$('#cat-cont .current-menu-item a').hover(function() { 
+		var colors = ["#ee3823","#fdb818","#2ba0a3"];  
+		var rand = Math.floor(Math.random()*colors.length);
+		$(this).animate({'color': colors[rand]}, 500);
+	},function() {
+		$(this).animate({'color': colors[rand]},500);
 	});
 	
 }

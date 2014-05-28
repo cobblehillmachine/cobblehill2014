@@ -37,9 +37,14 @@
 								} ?>
 					<a class="cta <?php echo strtolower(str_replace(' ','-',get_the_title())); ?>" href="/services/#<?php echo strtolower(str_replace(' ','-',get_the_title())); ?>" style="background: url('<?php echo $thumbnail; ?>') no-repeat center 80px <?php the_field('background_color'); ?>">
 						<h3><?php the_title(); ?></h3>
-						<div class="hidden description cont"><div class="sep"></div><span><?php the_field('service_description'); ?></span></div>
+						<div class="description cont"><div class="sep"></div><span><?php the_field('service_description'); ?></span></div>
 					</a>
 				<?php endwhile; wp_reset_query(); ?>
+	</div>
+	<div class="cont btn-mobile">
+		<div class="mid-cont">
+			<a class="button white" href="/services">what we do</a>
+		</div>
 	</div>
 	<div id="home-slider" class="cont">
 		<div class="center-cont">

@@ -20,7 +20,7 @@
 		</div>
 		<div class="right">
 			<div class="contact cont">
-				<a href="mailto:<?php the_field('contact_email', 'user_1'); ?>" target="_blank"><?php the_field('contact_email', 'user_1'); ?></a><br/>
+				<a href="mailto:<?php the_field('contact_email', 'user_1'); ?>"><?php the_field('contact_email', 'user_1'); ?></a><br/>
 				<?php the_field('phone', 'user_1'); ?>
 			</div>
 			<a class="button black btn-mobile" target="_blank" href="<?php the_field('address_map', 'user_1'); ?>">driving directions</a>
