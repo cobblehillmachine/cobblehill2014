@@ -24,6 +24,9 @@ mark {background:#fff;}
 
 /*HEADER*/
 #header {position:fixed; top:0; width:100%; padding:35px 0; z-index:1; }
+#nav .logo {background:url(../images/logo-white.png) no-repeat; width:172px; height:17px;}
+#nav .close {background:url(../images/white-x.png) no-repeat; width:29px; height:28px;}
+#header .logo {}
 .logo {margin-top:5px;}
 #header.scrolled {background:#231f20; padding:25px 0;}
 #header.scrolled .logo {margin-top:4px;}
