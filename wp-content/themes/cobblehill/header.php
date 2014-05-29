@@ -48,7 +48,7 @@
 	<div id="wrapper">
 		<div id="nav">
 			<div class="mid-cont">
-				<a class="logo hidden" href="/"><img alt="" src="<?php echo get_template_directory_uri(); ?>/images/logo-white.png" style="width:172px; height:17px;" /></a>
+				<a class="logo hidden" href="/"></a>
 				<div class="close hidden"><img alt="" src="<?php echo get_template_directory_uri(); ?>/images/white-x.png" style="width:29px; height:28px;"/></div>
 		
 				<?php $walker = new Menu_With_Description; ?>
@@ -57,8 +57,8 @@
 		</div>
 		<div id="header">
 			<div class="mid-cont">
-				<a class="logo" href="/"><img alt="" class="black" src="<?php echo get_template_directory_uri(); ?>/images/logo.png" /> <img alt="" class="white hidden" src="<?php echo get_template_directory_uri(); ?>/images/logo-white.png" /></a>
-				<div class="hamburger"><img alt="" class="black" src="<?php echo get_template_directory_uri(); ?>/images/hamburger-icon.png" /><img alt="" class="white hidden" src="<?php echo get_template_directory_uri(); ?>/images/hamburger-white-icon.png" /></div>
+				<a class="logo" href="/"></a>
+				<div class="hamburger"></div>
 			</div>
 
 		</div>
