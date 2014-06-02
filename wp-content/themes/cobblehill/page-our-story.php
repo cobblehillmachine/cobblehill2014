@@ -22,20 +22,14 @@
 			</p>
 		</div>
 	</div>
-	<div id="testimonial-slider" class="cont black-bg">
+	<div id="testimonial-slider" class="cont darker">
 		<div class="center-cont">
 			<?php query_posts(array('post_type' => 'Featured Works', 'order' => 'DESC', 'posts_per_page' => 10)); ?>			
 			<div class="flexslider cont">
 				<ul class="slides">
 					<?php while ( have_posts() ) : the_post(); ?>
-					<li>
+					<li style="background:url(<?php echo the_field('testimonial_background'); ?>) no-repeat center center;">
 						<div class="testimonial-cont cont">
-							<div class="desktop-img">
-								<?php $image = get_field('testimonial_background'); $size = 'full'; echo wp_get_attachment_image( $image, $size ); ?>
-							</div>
-							<div class="mobile-img">
-								<?php $image = get_field('testimonial_background'); $size = 'testimonial-bg'; echo wp_get_attachment_image( $image, $size ); ?>
-							</div>
 							<div class="testimonial-info">
 								<div class="table">
 									<div class="table-cell">

@@ -112,6 +112,7 @@ mark {background:#fff;}
 .flex-control-nav li a.flex-active, #single-project .flex-control-nav li a:hover {background:#fff;}
 .testimonial-cont {text-align:center; color:#fff;}
 .testimonial-cont .testimonial-info {position:relative; float:left; width:100%; padding:65px 0;}
+.testimonial-cont .testimonial-info .author {display:inline-block; width:100%;}
 .testimonial-cont .testimonial {font-size:30px; max-width:900px; display:inline-block; margin-bottom:25px; padding:0 25px;}
 #row4 .box {background-size:80px !important; text-align:center; font-size:12px; text-transform:uppercase; padding:130px 0 30px 0; min-height:375px; line-height:30px;}
 #row4 .strategy {background:url(../images/strategy-icon.png) no-repeat center 40px #2ba0a3;}
@@ -131,7 +132,9 @@ mark {background:#fff;}
 #our-story .blue {padding:95px 5%;}
 #our-story .blue h5, #our-story .blue h2 {margin-bottom:5px; width:65%;}
 #our-story .blue a {margin-top:-20px;}
-#testimonial-slider h3 {margin-top:-40px;}
+#testimonial-slider .testimonial-cont .table {height:335px;}
+#testimonial-slider .testimonial-cont .testimonial-info {padding:55px 0 85px;}
+#testimonial-slider .testimonial-cont h3 {margin-top:0;}
 
 /*CONTACT*/
 #contact .page-header {padding:70px 0 60px 0;}
@@ -329,7 +332,7 @@ h5, #services-cont .service .service-list ul li, #cat-cont .cat-list li a {font-
 	#section2 .cta {background-size: 100px auto !important;}
 	/*STORY*/
 	#testimonial-slider h3 {margin-top:-10px;}
-	#testimonial-slider .flex-control-nav {bottom:18px;}
+	#testimonial-slider .flex-control-nav {bottom:40px;}
 	
 	/*CONTACT*/
 	#map {height:400px;}
