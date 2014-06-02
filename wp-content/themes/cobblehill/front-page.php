@@ -35,9 +35,16 @@
 									$thumbnail = wp_get_attachment_image_src( $post_image_id, 'full', false);
 									if ($thumbnail) (string)$thumbnail = $thumbnail[0];
 								} ?>
-					<a class="cta <?php echo strtolower(str_replace(' ','-',get_the_title())); ?>" href="/services/#<?php echo strtolower(str_replace(' ','-',get_the_title())); ?>" style="background: url('<?php echo $thumbnail; ?>') no-repeat center 80px <?php the_field('background_color'); ?>">
-						<h3><?php the_title(); ?></h3>
-						<div class="description cont"><div class="sep"></div><span><?php the_field('service_description'); ?></span></div>
+					<a class="cta <?php echo strtolower(str_replace(' ','-',get_the_title())); ?>" href="/services/#<?php echo strtolower(str_replace(' ','-',get_the_title())); ?>" style="background:<?php the_field('background_color'); ?>">
+						<div class="no-hover">
+							<div class="icon"><?php the_post_thumbnail('full'); ?></div>
+							<h3><?php the_title(); ?></h3>
+						</div>
+						<div class="for-hover">
+							<div class="icon"><?php the_post_thumbnail('full'); ?></div>
+							<h3><?php the_title(); ?></h3>
+							<div class="description cont"><div class="sep"></div><span><?php the_field('service_description'); ?></span></div>
+						</div>
 					</a>
 				<?php endwhile; wp_reset_query(); ?>
 	</div>

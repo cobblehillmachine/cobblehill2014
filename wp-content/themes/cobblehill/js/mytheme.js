@@ -27,11 +27,12 @@ $(window).load(function() {
 	  });
 	}
 
-	$('#contact-form .ajax-loader').attr('src', '/wp-content/themes/cobblehill/images/preloader.gif');
+	$('#contact-form .ajax-loader').attr('src', '/wp-content/themes/cobblehill/images/ajax-loader.gif');
 });
 
 $(document).ready(function() {
 	fadeNavitems();
+	if ($(window).width() > 768) {homeCtas();}
 	$('.page-header a').addClass('button white');
 	colorTransition();
 	setInputFieldFunctions();
@@ -50,7 +51,7 @@ $(document).ready(function() {
 });
 
 $(window).resize(function() {
-
+	if ($(window).width() > 768) {homeCtas();}
 
 });
 
@@ -136,7 +137,7 @@ function colorTransition() {
 	},function() {
 		$('#footer .signup-cont .arrow').animate({'background-color': originalBg},500);
 	});
-	$('.button.white').hover(function() { 
+	$('.button.white, .blog-cont .post-excerpt a.button').hover(function() { 
 		var colors = ["#ee3823","#fdb818","#2ba0a3"];  
 		var rand = Math.floor(Math.random()*colors.length);
 		$(this).animate({'background-color': colors[rand], 'color': originalBtnColor, 'border-color': colors[rand]}, 500);
@@ -222,5 +223,12 @@ function loadMap() {
 		});
      }
     
+}
+
+function homeCtas() {
+	$('#cta-cont .cta').on({
+		mouseenter: function(){ $(this).children('.no-hover').hide(); $(this).children('.for-hover').fadeIn('slow'); },
+		mouseleave: function(){$(this).children('.for-hover').hide(); $(this).children('.no-hover').fadeIn('slow');}
+	});
 }
 
