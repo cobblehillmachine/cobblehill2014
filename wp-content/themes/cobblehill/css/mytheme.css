@@ -107,8 +107,9 @@ mark {background:#fff;}
 .right {background:#e5e5e5;}
 #single-project #row1 .left, #single-project #row1 .right {float:none !important;}
 #single-project #row1 .box-text {text-align:center; font-size:24px; padding:0 6%; color:#231f20;}
-.flex-control-nav {position:absolute; width:160px; left:calc(50% - 80px); bottom:50px; z-index:10;}
-.flex-control-nav li a {border:3px solid #fff; background:none; border-radius:15px; -webkit-border-radius:15px; -moz-border-radius:15px;  width:20px; height:20px; color:transparent; padding:5px; float:left; margin-right:15px; cursor:pointer;}
+.flex-control-nav {position:absolute; left:46%; bottom:50px; z-index:10;}
+.flex-control-nav li {float:left; margin-right:15px;}
+.flex-control-nav li a {border:3px solid #fff; background:none; border-radius:15px; -webkit-border-radius:15px; -moz-border-radius:15px;  width:20px; height:20px; color:transparent; padding:5px; float:left; cursor:pointer;}
 .flex-control-nav li a.flex-active, #single-project .flex-control-nav li a:hover {background:#fff;}
 .testimonial-cont {text-align:center; color:#fff;}
 .testimonial-cont .testimonial-info {position:relative; float:left; width:100%; padding:65px 0;}
@@ -193,7 +194,7 @@ a[href^="http://maps.google.com/maps"], .gmnoprint a, .gmnoprint span {display:n
 .center-cont {position:relative; margin:auto;}
 .desktop {display:block;}
 .hidden, .mobile, .mobile-img, .btn-mobile, #wrapper, #section2 .cta .for-hover {display:none;}
-.last, .flex-control-nav li:last-child a, .social-icon:last-child {margin-right:0;}
+.last, .flex-control-nav li:last-child, .social-icon:last-child {margin-right:0;}
 .cont, #nav .menu-main-nav-container, #contact-form .checkbox {position:relative; float:left; width:100%;}
 .left, .logo, #post-nav .nav-links .post-info, #contact-form .left-cont {float:left;}
 .right, .hamburger, .close, #our-story .blue a, #post-nav .nav-links .next .post-info {float:right;}
@@ -203,7 +204,7 @@ a[href^="http://maps.google.com/maps"], .gmnoprint a, .gmnoprint span {display:n
 .flexslider {z-index:0;}
 #main-wrap {margin-top:57px;}
 .videoWrapper {position: relative;padding-bottom: 56.25%; height: 0;}
-.videoWrapper iframe, .videoWrapper video {position: absolute;top: 0;left: 0;width: 100%;height:100%;}
+.videoWrapper iframe, .videoWrapper video {position:absolute; top:0; left:0; width:100%; height:100%;}
 #header, input[type="submit"] {-webkit-transition: all 0.5s ease; -moz-transition: all 0.5s ease; -o-transition: all 0.5s ease; transition: all 0.5s ease;}
 .fade, #nav li a .sub, #featured-work .work-info .button, #our-story .blue a {-webkit-transition: all 0.4s ease-in-out;-moz-transition: all 0.4s ease-in-out; -o-transition: all 0.4s ease-in-out; transition: all 0.4s ease-in-out;}
 h1 {font-size:48px; line-height:54px; margin-top:0; margin-bottom:30px; letter-spacing:1.5px;}
@@ -225,6 +226,7 @@ h5, #services-cont .service .service-list ul li, #cat-cont .cat-list li a {font-
 .gray-bg {background:#f4f0ef;}
 .paragraph:nth-of-type(1) .button, .paragraph:nth-of-type(2) .button {margin:14px 0 0 0;}
 .service-info h3 {margin:0;}
+.error404 .page-header img {margin-bottom:45px;}
 
 /*FONTS*/
 .thin, .headline, #section2 .header span, h1 {font-family: "proxima-nova",sans-serif; font-style: normal; font-weight: 100;}
@@ -265,7 +267,7 @@ h5, #services-cont .service .service-list ul li, #cat-cont .cat-list li a {font-
 .col, #contact-form .wpcf7-form-control-wrap:nth-child(3), .paragraph:nth-child(2n+2) {padding-left:25px;}
 
 @media screen and (min-width:1281px) {
-	#single-project .banner {margin-top:-25%;}
+	#single-project .banner {margin-top:-18%;}
 	.center-cont, .mid-cont {max-width:1700px;}
 	.mid-cont {padding:0 2%;}
 	.home-tagline {font-size:50px;}

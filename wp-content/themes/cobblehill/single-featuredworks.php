@@ -25,9 +25,15 @@
 				</div>
 			</div>
 		</div>
-		<?php
-		$cc = get_the_content();
-		if($cc != '') { ?>
+		<?php if ( get_post_meta($post->ID, 'video', true) ){ ?>
+			<div class="cont black-bg">
+				<div class="center-cont">
+					<div class="videoWrapper">
+						<?php the_field('video'); ?>
+					</div>
+				</div>
+			</div>		
+		<?php } else { ?>
 			<div id="project-slider" class="cont black-bg">
 				<div class="center-cont">
 					<div id="flexslider" class="flexslider cont">
@@ -39,14 +45,6 @@
 					</div>
 				</div>
 			</div>
-		<?php } else if ( get_post_meta($post->ID, 'video', true) ){ ?>
-			<div class="cont black-bg">
-				<div class="center-cont">
-					<div class="videoWrapper">
-						<?php the_field('video'); ?>
-					</div>
-				</div>
-			</div>		
 		<?php } ?>
 		<div id="row3" class="cont darker">
 			<div class="center-cont">

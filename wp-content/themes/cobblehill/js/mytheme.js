@@ -26,13 +26,14 @@ $(window).load(function() {
 		useCSS: false //{NEW} Boolean: Slider will use CSS3 transitions if available
 	  });
 	}
-
+	centerSliderNav()
 	$('#contact-form .ajax-loader').attr('src', '/wp-content/themes/cobblehill/images/ajax-loader.gif');
 });
 
 $(document).ready(function() {
 	fadeNavitems();
 	if ($(window).width() > 768) {homeCtas();}
+	centerSliderNav();
 	$('.page-header a').addClass('button white');
 	colorTransition();
 	setInputFieldFunctions();
@@ -52,6 +53,7 @@ $(document).ready(function() {
 
 $(window).resize(function() {
 	if ($(window).width() > 768) {homeCtas();}
+	centerSliderNav();
 
 });
 
@@ -244,5 +246,11 @@ function homeCtas() {
 		mouseenter: function(){ $(this).children('.no-hover').hide(); $(this).children('.for-hover').fadeIn('slow'); },
 		mouseleave: function(){$(this).children('.for-hover').hide(); $(this).children('.no-hover').fadeIn('slow');}
 	});
+}
+
+function centerSliderNav() {
+	var navW = $('.flex-control-nav').width();
+	var contW= $('.flexslider').width();
+	$('.flex-control-nav').css({'left': (contW - navW)/2});
 }
 

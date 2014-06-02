@@ -4,7 +4,7 @@
 	<div class="home-tagline desktop"><?php the_field('home_tagline'); ?></div>
 	<div id="home-scroll" class="desktop" onclick="scrollToHome();"><img class="pointer" alt="" src="<?php echo get_template_directory_uri(); ?>/images/scroll-icon.png" /></div>
 	<div class="videoWrapper">
-		<video autoplay="true" loop="true">
+		<video autoplay="true" loop="true" poster="<?php echo get_template_directory_uri(); ?>/images/cobble-hill-header.jpg">
 		  <source src="<?php echo get_template_directory_uri(); ?>/videos/cobble-hill-video.mp4" type="video/mp4">
 		  <source src="<?php echo get_template_directory_uri(); ?>/videos/cobble-hill-video.ogv" type="video/ogv">
 		  <source src="<?php echo get_template_directory_uri(); ?>/videos/cobble-hill-video.webm" type="video/webm">

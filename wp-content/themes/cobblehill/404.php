@@ -10,23 +10,14 @@
 get_header(); ?>
 
 
-	<div id="primary" class="content-area">
-		<div id="content" class="site-content" role="main">
+<div class="page-header cont gradient">
+	<div class="mid-cont">
+		<img  alt="" src="<?php echo get_template_directory_uri(); ?>/images/404.png" />
+		<h1><span>Whoops, that page doesn’t exist.</span></h1>
+		<a class="button" href="/">go back to the home page</a>
 
-			<header class="page-header">
-				<h1 class="page-title"><?php _e( 'Not Found', 'twentyfourteen' ); ?></h1>
-			</header>
-
-			<div class="page-content">
-				<p><?php _e( 'It looks like nothing was found at this location. Maybe try a search?', 'twentyfourteen' ); ?></p>
-
-				<?php get_search_form(); ?>
-			</div><!-- .page-content -->
-
-		</div><!-- #content -->
-	</div><!-- #primary -->
+	</div>
+</div>
 
 <?php
-get_sidebar( 'content' );
-get_sidebar();
 get_footer();
