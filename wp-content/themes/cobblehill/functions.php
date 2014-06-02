@@ -549,31 +549,6 @@ function create_post_type() {
 	  	register_post_type( 'Featured Works', $args2);
 	flush_rewrite_rules();
 	
-	// $args3 = array(
-	// 	'labels' => array(
-	// 		'name' => __( 'Quotes' ),
-	// 		'singular_name' => __( 'quote' )
-	// 	),
-	// 	'public' => true,
-	// 	'has_archive' => true,
-	// 	'rewrite' => array('slug' => 'quotes'),
-	// 	'supports' => array( 'title', 'editor' )
-	// );
-	//   
-	//   	register_post_type( 'Quotes', $args3);
-  
-	//register_taxonomy_for_object_type('post_tag', 'offerings');
-	//register_taxonomy_for_object_type('category', 'testimonials');
-	//register_taxonomy_for_object_type('category', 'projects');
-
-	//register_taxonomy_for_object_type('post_tag', 'page');
-	//register_taxonomy_for_object_type('category', 'page');
-	
-	
-}
-
-if ( function_exists( 'add_image_size' ) ) { 
-	add_image_size( 'testimonial-bg', 450, 430, true ); //(cropped)
 }
 
 function trim_excerpt($text) {

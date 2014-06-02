@@ -25,34 +25,36 @@
 				</div>
 			</div>
 		</div>
-		<div id="project-slider" class="cont black-bg">
-			<div class="center-cont">
-				<div id="flexslider" class="flexslider cont">
-					<ul class="slides">
-						<?php while ( have_posts() ) : the_post(); ?>
-							<?php echo get_the_content(); ?>
-						<?php endwhile; ?>
-					</ul>
+		<?php
+		$cc = get_the_content();
+		if($cc != '') { ?>
+			<div id="project-slider" class="cont black-bg">
+				<div class="center-cont">
+					<div id="flexslider" class="flexslider cont">
+						<ul class="slides">
+							<?php while ( have_posts() ) : the_post(); ?>
+								<?php echo get_the_content(); ?>
+							<?php endwhile; ?>
+						</ul>
+					</div>
 				</div>
 			</div>
-		</div>
-		<div id="row3" class="cont black-bg">
+		<?php } else if ( get_post_meta($post->ID, 'video', true) ){ ?>
+			<div class="cont black-bg">
+				<div class="center-cont">
+					<div class="videoWrapper">
+						<?php the_field('video'); ?>
+					</div>
+				</div>
+			</div>		
+		<?php } ?>
+		<div id="row3" class="cont darker">
 			<div class="center-cont">
-				<div class="testimonial-cont cont">
-					<div class="desktop-img">
-						<?php $image = get_field('testimonial_background'); $size = 'full'; echo wp_get_attachment_image( $image, $size ); ?>
-					</div>
-					<div class="mobile-img">
-						<?php $image = get_field('testimonial_background'); $size = 'testimonial-bg'; echo wp_get_attachment_image( $image, $size ); ?>
-					</div>
-					<div class="testimonial-info">
-						<div class="table">
-							<div class="table-cell">
-								<h3>testimonial</h3>
-								<div class="testimonial">"<?php the_field('testimonial'); ?>"</div>
-								<div class="author">&ndash; <?php the_field('testimonial_author'); ?>,<span>&nbsp;<?php the_title(); ?></span></div>
-							</div>
-						</div>
+				<div class="testimonial-cont cont" style="background:url(<?php echo the_field('testimonial_background'); ?>) no-repeat center center;">
+					<div class="testimonial-info">				
+						<h3>testimonial</h3>
+						<div class="testimonial">"<?php the_field('testimonial'); ?>"</div>
+						<div class="author">&ndash; <?php the_field('testimonial_author'); ?>,<span>&nbsp;<?php the_title(); ?></span></div>
 					</div>
 				</div>
 			</div>
