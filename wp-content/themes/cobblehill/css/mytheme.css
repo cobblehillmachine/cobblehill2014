@@ -397,6 +397,7 @@ h5, #services-cont .service .service-list ul li, #cat-cont .cat-list li a {font-
 	#services .page-header .button:last-child, #featured-work .page-header .button:last-child {margin-top:-8px;}
 	#section1 h5, .page-header h5, .service-info h3 {margin-bottom:0;}
 	#home .btn-mobile {padding:20px 0;}
+	#home .btn-mobile .button {float:left; width:100%;}
 	#section2 .cta .description {opacity:1; filter:alpha(opacity=0);}
 	.flex-control-nav li a {border-color:#231f20;}
 	#testimonial-slider .flex-control-nav li a {border-color:#fff;}
