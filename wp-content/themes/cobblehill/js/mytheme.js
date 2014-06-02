@@ -137,7 +137,7 @@ function colorTransition() {
 	},function() {
 		$('#footer .signup-cont .arrow').animate({'background-color': originalBg},500);
 	});
-	$('.button.white, .blog-cont .post-excerpt a.button').hover(function() { 
+	$('.button.white').hover(function() { 
 		var colors = ["#ee3823","#fdb818","#2ba0a3"];  
 		var rand = Math.floor(Math.random()*colors.length);
 		$(this).animate({'background-color': colors[rand], 'color': originalBtnColor, 'border-color': colors[rand]}, 500);
