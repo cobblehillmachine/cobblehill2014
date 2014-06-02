@@ -59,13 +59,12 @@ $(window).scroll(function() {
  		var sT = $(this).scrollTop();
         if (sT >= 10) {
             $('#header').addClass('scrolled');
-			$('#header .black').hide();
-			$('#header .white').css({'display':'block'});
+			$('#header .logo').css({'background-position':'0 -18px'});
+			$('#header .hamburger').css({'background-position':'0 -28px'});
 			//$('#cat-cont').css({'position': 'fixed', 'top': 77});
         }else {
             $('#header').removeClass('scrolled');
-			$('#header .black').css({'display':'block'});
-			$('#header .white').hide();
+			$('#header .logo, #header .hamburger').css({'background-position':'0 0'});
 			//$('#cat-cont').css({'position': 'relative', 'top': 0});
         }
 	}
