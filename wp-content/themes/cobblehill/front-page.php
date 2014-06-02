@@ -30,11 +30,7 @@
 	<div id="cta-cont" class="cont">
 		<?php query_posts(array('post_type' => 'Services', 'order' => 'ASC', 'posts_per_page' => 3)); ?>
 				<?php while ( have_posts() ) : the_post(); ?>	
-						<?php $post_image_id = get_post_thumbnail_id($post_to_use->ID);
-								if ($post_image_id) {
-									$thumbnail = wp_get_attachment_image_src( $post_image_id, 'full', false);
-									if ($thumbnail) (string)$thumbnail = $thumbnail[0];
-								} ?>
+						
 					<a class="cta <?php echo strtolower(str_replace(' ','-',get_the_title())); ?>" href="/services/#<?php echo strtolower(str_replace(' ','-',get_the_title())); ?>" style="background:<?php the_field('background_color'); ?>">
 						<div class="no-hover">
 							<div class="icon"><?php the_post_thumbnail('full'); ?></div>
