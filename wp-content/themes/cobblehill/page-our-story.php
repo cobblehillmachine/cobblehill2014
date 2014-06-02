@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<div id="story-slider" class="cont gray-bg">
+<div id="story-slider" class="cont black-bg">
 	<div class="center-cont">
 		<div class="flexslider cont">
 			<ul class="slides">

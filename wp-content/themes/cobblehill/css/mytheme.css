@@ -108,7 +108,7 @@ mark {background:#fff;}
 #single-project .intro {margin:20px 0;}
 .right {background:#e5e5e5;}
 #single-project #row1 .left, #single-project #row1 .right {float:none !important;}
-#single-project #row1 .box-text {text-align:center; font-size:24px; padding:0 6%;}
+#single-project #row1 .box-text {text-align:center; font-size:24px; padding:0 6%; color:#231f20;}
 .flex-control-nav {position:absolute; width:160px; left:calc(50% - 80px); bottom:50px; z-index:10;}
 .flex-control-nav li a {border:3px solid #fff; background:none; border-radius:15px; -webkit-border-radius:15px; -moz-border-radius:15px;  width:20px; height:20px; color:transparent; padding:5px; float:left; margin-right:15px; cursor:pointer;}
 .flex-control-nav li a.flex-active, #single-project .flex-control-nav li a:hover {background:#fff;}

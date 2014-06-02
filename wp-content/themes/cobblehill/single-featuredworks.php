@@ -9,7 +9,7 @@
 				<a class="button" href="<?php the_field('website_url'); ?>" target="_blank">view the site</a>
 			</div>
 		</div>
-		<div id="row1" class="cont">
+		<div id="row1" class="cont black-bg">
 			<div class="center-cont">
 				<div class="table">
 					<?php if ( get_post_meta($post->ID, 'small_image_left', true) ) { ?>
@@ -25,7 +25,7 @@
 				</div>
 			</div>
 		</div>
-		<div id="project-slider" class="cont gray-bg">
+		<div id="project-slider" class="cont black-bg">
 			<div class="center-cont">
 				<div id="flexslider" class="flexslider cont">
 					<ul class="slides">

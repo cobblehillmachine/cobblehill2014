@@ -46,7 +46,7 @@
 			<a class="button white" href="/services">what we do</a>
 		</div>
 	</div>
-	<div id="home-slider" class="cont">
+	<div id="home-slider" class="cont black-bg">
 		<div class="center-cont">
 			<div class="title-header cont mobile"><h5>featured work</h5></div>
 			<?php query_posts(array('post_type' => 'Featured Works', 'order' => 'DESC', 'posts_per_page' => 10)); ?>
