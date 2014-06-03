@@ -242,10 +242,13 @@ function loadMap() {
 }
 
 function homeCtas() {
-	$('#cta-cont .cta').on({
-		mouseenter: function(){ $(this).children('.no-hover').hide(); $(this).children('.for-hover').fadeIn('slow'); },
-		mouseleave: function(){$(this).children('.for-hover').hide(); $(this).children('.no-hover').fadeIn('slow');}
+	$('#cta-cont .cta').each(function() {
+		$(this).on({
+			mouseenter: function(){ $(this).children('.no-hover').hide(); $(this).children('.for-hover').fadeIn('slow'); },
+			mouseleave: function(){$(this).children('.for-hover').hide(); $(this).children('.no-hover').fadeIn('slow');}
+		});
 	});
+
 }
 
 function centerSliderNav() {
