@@ -17,7 +17,7 @@
 								$thumbnail = wp_get_attachment_image_src( $post_image_id, 'full', false);
 								if ($thumbnail) (string)$thumbnail = $thumbnail[0];
 							} ?>
-				<div class="service cont">
+				<div id="<?php echo strtolower(str_replace(' ','-',get_the_title())); ?>" class="service cont">
 					<div class="icon <?php echo strtolower(str_replace(' ','-',get_the_title())); ?>" style="background: url('<?php echo $thumbnail; ?>') no-repeat center 112px <?php the_field('background_color'); ?>"></div>
 					<div class="service-info">
 						<h3><?php the_field('sub_title'); ?></h3>

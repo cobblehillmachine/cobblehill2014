@@ -69,7 +69,9 @@ mark {background:#fff;}
 #section2 .header .span_4 {float:right !important; padding-right:25px;}
 #section2 .cta {height:310px; text-align:center; border-bottom:3px solid #231f20; opacity:1;}
 #section2 .cta .icon {margin-top:65px; float:left; width:100%;}
-#section2 .cta .icon img {display:inline-block;}
+#section2 .cta:first-child .no-hover .icon img {display:inline-block; width:139px; height:140px;}
+#section2 .cta:nth-child(2) .no-hover .icon img {display:inline-block; width:115px; height:119px;}
+#section2 .cta:last-child .no-hover .icon img {display:inline-block; width:127px; height:115px;}
 #section2 .cta .for-hover .icon img {width:85px; height:auto;}
 #section2 .cta:first-child .icon {margin:55px 0 0 12px;}
 #section2 .cta h3 {margin:25px 0 0 0;}
