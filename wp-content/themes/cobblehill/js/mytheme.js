@@ -32,7 +32,7 @@ $(window).load(function() {
 });
 
 $(document).ready(function() {
-	initialize();
+	
 	fadeNavitems();
 	if ($(window).width() > 1024) {homeCtas();}
 	centerSliderNav();
@@ -45,17 +45,16 @@ $(document).ready(function() {
 	    checkboxClass: 'icheckbox_minimal',
 	    radioClass: 'iradio_minimal',
 	    increaseArea: '20%' // optional
-	});
-	
-	
+	});	
     $('#contact-form .ajax-loader').attr('src', '/wp-content/themes/cobblehill/images/preloader.gif');
+	initialize();
 
 });
 
 $(window).resize(function() {
 	// if ($(window).width() > 1024) {homeCtas();}
 	centerSliderNav();
-	initialize();
+	//initialize();
 
 });
 
@@ -221,34 +220,31 @@ function centerSliderNav() {
 
 function initialize() {
 	var myLatlng = new google.maps.LatLng(32.787508,-79.929562);
+    var mapOptions = {
+		zoom: 16,
+		scaleControl: false,
+		scrollwheel: false,
+		zoomControl: false,
+		panControl:false,
+		streetViewControl: false,
+		mapTypeControl:false,
+		center: myLatlng,
+		styles: [{featureType:"landscape",stylers:[{saturation:-100},{lightness:65},{visibility:"on"}]},{featureType:"poi",stylers:[{saturation:-100},{lightness:51},{visibility:"simplified"}]},{featureType:"road.highway",stylers:[{saturation:-100},{visibility:"simplified"}]},{featureType:"road.arterial",stylers:[{saturation:-100},{lightness:30},{visibility:"on"}]},{featureType:"road.local",stylers:[{saturation:-100},{lightness:40},{visibility:"on"}]},{featureType:"transit",stylers:[{saturation:-100},{visibility:"simplified"}]},{featureType:"administrative.province",stylers:[{visibility:"off"}]/**/},{featureType:"administrative.locality",stylers:[{visibility:"off"}]},{featureType:"administrative.neighborhood",stylers:[{visibility:"on"}]/**/},{featureType:"water",elementType:"labels",stylers:[{visibility:"on"},{lightness:-25},{saturation:-100}]},{featureType:"water",elementType:"geometry",stylers:[{hue:"#ffff00"},{lightness:-25},{saturation:-97}]}]
+	};
 
-       var mapOptions = {
-           zoom: 16,
-	 scaleControl: false,
-	 scrollwheel: false,
-	 zoomControl: false,
-	 panControl:false,
-	 streetViewControl: false,
-	 mapTypeControl:false,
-           center: myLatlng,
-           styles: [{featureType:"landscape",stylers:[{saturation:-100},{lightness:65},{visibility:"on"}]},{featureType:"poi",stylers:[{saturation:-100},{lightness:51},{visibility:"simplified"}]},{featureType:"road.highway",stylers:[{saturation:-100},{visibility:"simplified"}]},{featureType:"road.arterial",stylers:[{saturation:-100},{lightness:30},{visibility:"on"}]},{featureType:"road.local",stylers:[{saturation:-100},{lightness:40},{visibility:"on"}]},{featureType:"transit",stylers:[{saturation:-100},{visibility:"simplified"}]},{featureType:"administrative.province",stylers:[{visibility:"off"}]/**/},{featureType:"administrative.locality",stylers:[{visibility:"off"}]},{featureType:"administrative.neighborhood",stylers:[{visibility:"on"}]/**/},{featureType:"water",elementType:"labels",stylers:[{visibility:"on"},{lightness:-25},{saturation:-100}]},{featureType:"water",elementType:"geometry",stylers:[{hue:"#ffff00"},{lightness:-25},{saturation:-97}]}]
-       };
-
-       var mapElement = document.getElementById('map');
-       var map = new google.maps.Map(mapElement, mapOptions);
-	 var image = new google.maps.MarkerImage('/wp-content/themes/cobblehill/images/map-pin.png');
-	 var marker = new google.maps.Marker({
-	      position: map.getCenter(),
-	      map: map,
-		  icon: image
-	  });
-	
-	var contentString =
-	'<div id="map-bubble"><img src="/wp-content/themes/cobblehill/images/map-pin-img.jpg" style="position:relative; float:left; margin:22px 25px 22px 18px;"/><div id="map-address"><h5>COBBLE HILL</h5>329 East Bay St, 2nd Floor</br>Charleston, SC 29401<a class="button" href="https://www.google.com/maps/place/Cobble+Hill/@32.787509,-79.929363,17z/data=!3m1!4b1!4m2!3m1!1s0x88fe7a728c0f0e33:0x135fed5f9e6aa76" target="_blank">driving directions</a></div></div>';
-	var infowindow = new google.maps.InfoWindow({
-	content: contentString
+	var mapElement = document.getElementById('map');
+	var map = new google.maps.Map(mapElement, mapOptions);
+	var image = new google.maps.MarkerImage('/wp-content/themes/cobblehill/images/map-pin.png');
+	var marker = new google.maps.Marker({
+		position: map.getCenter(),
+		map: map,
+		icon: image
 	});
+	
+	var contentString = '<div id="map-bubble"><img src="/wp-content/themes/cobblehill/images/map-pin-img.jpg" style="position:relative; float:left; margin:22px 25px 22px 18px;"/><div id="map-address"><h5>COBBLE HILL</h5>329 East Bay St, 2nd Floor</br>Charleston, SC 29401<a class="button" href="https://www.google.com/maps/place/Cobble+Hill/@32.787509,-79.929363,17z/data=!3m1!4b1!4m2!3m1!1s0x88fe7a728c0f0e33:0x135fed5f9e6aa76" target="_blank">driving directions</a></div></div>';
+	var infowindow = new google.maps.InfoWindow({content: contentString});
 	var center;
+
 	function calculateCenter() {
 	  center = map.getCenter();
 	}
