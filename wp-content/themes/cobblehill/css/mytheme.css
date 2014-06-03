@@ -68,7 +68,8 @@ mark {background:#fff;}
 #section2 .header span {float:left; color:#fff; font-size:25px; margin-top:15px; letter-spacing:1.5px;}
 #section2 .header a {float:right !important; margin-right:25px; width:25%;}
 #section2 .cta {height:310px; text-align:center; border-bottom:3px solid #231f20; opacity:1;}
-#section2 .cta .icon {margin-top:65px;}
+#section2 .cta .icon {margin-top:65px; float:left; width:100%;}
+#section2 .cta .icon img {display:inline-block;}
 #section2 .cta .for-hover .icon img {width:85px; height:auto;}
 #section2 .cta:first-child .icon {margin:55px 0 0 20px;}
 #section2 .cta h3 {margin:25px 0 0 0;}
@@ -78,6 +79,7 @@ mark {background:#fff;}
 #home-slider .title-header h5 {color:#fff; background:#231f20; margin:0; padding:10px 25px;}
 #home-slider .featured-info .info-cont {padding:30px 25px;}
 #home-slider .featured-info h5, #home-slider .featured-info h2 {margin-bottom:0;}
+#section2 .cta .for-hover {opacity:0;}
 
 /*SERVICES*/
 .page-header {padding:85px 0 100px; text-align:center;}
@@ -228,6 +230,8 @@ h5, #services-cont .service .service-list ul li, #cat-cont .cat-list li a {font-
 .paragraph:nth-of-type(1) .button, .paragraph:nth-of-type(2) .button {margin:14px 0 0 0;}
 .service-info h3 {margin:0;}
 .error404 .page-header img {margin-bottom:45px;}
+.hideme {opacity:0;}
+.hideme:first-child {opacity:1;}
 
 /*FONTS*/
 .thin, .headline, #section2 .header span, h1 {font-family: "proxima-nova",sans-serif; font-style: normal; font-weight: 100;}

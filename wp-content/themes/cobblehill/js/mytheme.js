@@ -1,5 +1,5 @@
 $(window).bind('load', function() {
-   $('#wrapper').fadeIn('slow');
+   $('#wrapper').delay(200).fadeIn('slow');
 });
 
 $(window).load(function() {
@@ -32,7 +32,7 @@ $(window).load(function() {
 
 $(document).ready(function() {
 	fadeNavitems();
-	if ($(window).width() > 768) {homeCtas();}
+	if ($(window).width() > 1024) {homeCtas();}
 	centerSliderNav();
 	$('.page-header a').addClass('button white');
 	colorTransition();
@@ -47,12 +47,11 @@ $(document).ready(function() {
 	loadMap();
 	
     $('#contact-form .ajax-loader').attr('src', '/wp-content/themes/cobblehill/images/preloader.gif');
-  
 
 });
 
 $(window).resize(function() {
-	if ($(window).width() > 768) {homeCtas();}
+	if ($(window).width() > 1024) {homeCtas();}
 	centerSliderNav();
 
 });
@@ -71,20 +70,23 @@ $(window).scroll(function() {
 			//$('#cat-cont').css({'position': 'relative', 'top': 0});
         }
 	}
-	// /* Check the location of each desired element */
-	//     $('#featured-work .thumb img, #featured-work .work-info').each( function(i){
-	// 
-	//         var bottom_of_object = $(this).position().top + $(this).outerHeight();
-	//         var bottom_of_window = $(window).scrollTop() + $(window).height();
-	// 
-	//         /* If the object is completely visible in the window, fade it it */
-	//         if( bottom_of_window > bottom_of_object ){
-	// 
-	//             $(this).animate({'opacity':'1'},500);
-	// 
-	//         }
-	// 
-	//     });
+	
+	    /* Check the location of each desired element */
+        $('.hideme').each( function(i){
+
+            var bottom_of_object = $(this).position().top + $('#featured-cont').height();
+            var bottom_of_window = $(window).scrollTop() + $(window).height() + 805;
+
+            /* If the object is completely visible in the window, fade it it */
+            if( bottom_of_window > bottom_of_object ){
+
+                $(this).animate({'opacity':'1'},500);
+
+            }
+
+        }); 
+	
+
 });
 
 
@@ -227,7 +229,16 @@ function loadMap() {
 		      title: 'Hello World!',
 			  icon: image
 		  });
+		var contentString =
+		'<div id="content"><div id="siteNotice"></div><img id="map-logo" src="/wp-content/themes/cobblehill/images/map-pin-img.jpg" style="position:relative; float:left; margin:25px;"/><div id="map-address">COBBLE HILL</br>329 East Bay St, 2nd Floor</br>Charleston, SC 29401</div></div>';
+		var infowindow = new google.maps.InfoWindow({
+		content: contentString
+		});
+		google.maps.event.addListener(marker, 'click', function() {
+		infowindow.open(map,marker);
+		});
 		var center;
+
 		function calculateCenter() {
 		  center = map.getCenter();
 		}
@@ -244,8 +255,8 @@ function loadMap() {
 function homeCtas() {
 	$('#cta-cont .cta').each(function() {
 		$(this).on({
-			mouseenter: function(){ $(this).children('.no-hover').hide(); $(this).children('.for-hover').fadeIn('slow'); },
-			mouseleave: function(){$(this).children('.for-hover').hide(); $(this).children('.no-hover').fadeIn('slow');}
+			mouseenter: function(){ $(this).children('.no-hover').hide(); $(this).children('.for-hover').css({'opacity':1}); $(this).children('.for-hover').fadeIn('slow'); },
+			mouseleave: function(){$(this).children('.for-hover').hide(); $(this).children('.for-hover').css({'opacity':0}); $(this).children('.no-hover').fadeIn('slow');}
 		});
 	});
 
