@@ -110,7 +110,7 @@ mark {background:#fff;}
 .right {background:#e5e5e5;}
 #single-project #row1 .left, #single-project #row1 .right {float:none !important;}
 #single-project #row1 .box-text {text-align:center; font-size:24px; padding:0 6%; color:#231f20;}
-.flex-control-nav {position:absolute; left:46%; bottom:50px; z-index:10;}
+.flex-control-nav {position:absolute; bottom:50px; z-index:10;}
 .flex-control-nav li {float:left; margin-right:15px;}
 .flex-control-nav li a {border:3px solid #fff; background:none; border-radius:15px; -webkit-border-radius:15px; -moz-border-radius:15px;  width:20px; height:20px; color:transparent; padding:5px; float:left; cursor:pointer;}
 .flex-control-nav li a.flex-active, #single-project .flex-control-nav li a:hover {background:#fff;}
@@ -189,6 +189,7 @@ a[href^="http://maps.google.com/maps"], .gmnoprint a, .gmnoprint span {display:n
 .latest-posts .latest {padding:55px;}
 .latest-posts .latest .entry-title {font-size:24px; line-height:30px; font-weight:300;}
 .latest-posts .latest .button {margin-top:10px; display:inline-block;}
+.single-post .blog-cont .entry-meta  {min-width:0;}
 
 
 /*REUSABLE*/
@@ -231,7 +232,7 @@ h5, #services-cont .service .service-list ul li, #cat-cont .cat-list li a {font-
 .service-info h3 {margin:0;}
 .error404 .page-header img {margin-bottom:45px;}
 .hideme {opacity:0;}
-.hideme:first-child {opacity:1;}
+.hideme:first-child, .hideme:nth-child(2) {opacity:1;}
 
 /*FONTS*/
 .thin, .headline, #section2 .header span, h1 {font-family: "proxima-nova",sans-serif; font-style: normal; font-weight: 100;}
@@ -293,6 +294,7 @@ h5, #services-cont .service .service-list ul li, #cat-cont .cat-list li a {font-
 	#featured-work .work .thumb img {height:358px; max-width:100%; width:auto;}
 	#contact-form span.wpcf7-list-item {margin-right:45px;}
 	#post-nav .nav-links .post-info {width:89%;}
+	.hideme {opacity:1;}
 }
 
 @media screen and (max-width:999px) {
