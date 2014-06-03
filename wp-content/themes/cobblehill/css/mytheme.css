@@ -64,9 +64,9 @@ mark {background:#fff;}
 #section1 .headline {display:inline-block; width:100%; margin-bottom:40px;}
 #section1 .button {display:inline-block;}
 #section1 h5 {margin-top:20px;}
-#section2 .header {background:#231f20; padding:20px 25px;}
+#section2 .header {background:#231f20; padding:20px 0 20px 25px;}
 #section2 .header span {float:left; color:#fff; font-size:25px; margin-top:15px; letter-spacing:1.5px;}
-#section2 .header a {float:right !important; width:33.3333333333%;}
+#section2 .header .span_4 {float:right !important; padding-right:25px;}
 #section2 .cta {height:310px; text-align:center; border-bottom:3px solid #231f20; opacity:1;}
 #section2 .cta .icon {margin-top:65px; float:left; width:100%;}
 #section2 .cta .icon img {display:inline-block;}
@@ -144,7 +144,7 @@ mark {background:#fff;}
 /*CONTACT*/
 #contact .page-header {padding:70px 0 60px 0;}
 #map {height:720px;}
-a[href^="http://maps.google.com/maps"], .gmnoprint a, .gmnoprint span {display:none !important}
+a[href^="http://maps.google.com/maps"], .gmnoprint a, .gmnoprint span, img[src="https://maps.gstatic.com/mapfiles/api-3/images/mapcnt3.png"] {display:none !important}
 .gmnoprint div {background:none !important;}
 #contact .black-bg {padding:95px 0 85px; font-size:30px; font-weight:100 !important;}
 #contact .black-bg .button {float:left; margin-top:20px;}
@@ -167,6 +167,10 @@ a[href^="http://maps.google.com/maps"], .gmnoprint a, .gmnoprint span {display:n
 .icheckbox_minimal {display:inline-block; *display:inline; vertical-align:middle; margin:0 15px 0 0; padding 0; width:16px; height:16px; background:url(../images/minimal.png) no-repeat; border:none; cursor:pointer;}
 .icheckbox_minimal {background-position: 0 0;}
 .icheckbox_minimal.checked {background-position: -18px 0;}
+#map-bubble {font-size:18px;}
+#map-bubble h5 {margin-bottom:0;}
+#map-bubble .button {float:left; width:100%; min-width:0; margin-top:20px;}
+#map-bubble #map-address {position:relative; float:left; width:260px; margin-top:35px;}
 
 /*BLOG*/
 #cat-cont {padding:43px 0 15px 0;}
@@ -200,7 +204,7 @@ a[href^="http://maps.google.com/maps"], .gmnoprint a, .gmnoprint span {display:n
 .desktop {display:block;}
 .hidden, .mobile, .mobile-img, .btn-mobile, #wrapper, #section2 .cta .for-hover {display:none;}
 .last, .flex-control-nav li:last-child, .social-icon:last-child {margin-right:0;}
-.cont, #nav .menu-main-nav-container, #contact-form .checkbox {position:relative; float:left; width:100%;}
+.cont, #nav .menu-main-nav-container, #contact-form .checkbox, #section2 .header .span_4 a {position:relative; float:left; width:100%;}
 .left, .logo, #post-nav .nav-links .post-info, #contact-form .left-cont {float:left;}
 .right, .hamburger, .close, #our-story .blue a, #post-nav .nav-links .next .post-info {float:right;}
 .pointer, .hamburger, .close, input[type="submit"] {cursor:pointer;}
@@ -226,7 +230,7 @@ h5, #services-cont .service .service-list ul li, #cat-cont .cat-list li a {font-
 .paragraph {width:50%; float:left; text-align:left;}
 .paragraph:nth-child(2n+1) {padding-right:25px;}
 .blue {background:#2ba0a3;}
-.black-bg, input[type="submit"]:hover {background:#231f20; color:#fff;}
+.black-bg, input[type="submit"]:hover, #map-bubble .button:hover {background:#231f20; color:#fff;}
 .darker {background:#000;}
 .gray-bg {background:#f4f0ef;}
 .paragraph:nth-of-type(1) .button, .paragraph:nth-of-type(2) .button {margin:14px 0 0 0;}
@@ -237,7 +241,7 @@ h5, #services-cont .service .service-list ul li, #cat-cont .cat-list li a {font-
 
 /*FONTS*/
 .thin, .headline, #section2 .header span, h1 {font-family: "proxima-nova",sans-serif; font-style: normal; font-weight: 100;}
-.light, .home-tagline, h2, #single-project #row1 .box-text, .testimonial-cont .testimonial, #contact .black-bg, .blog-cont .entry-title {font-family: "proxima-nova",sans-serif; font-style: normal; font-weight: 300; letter-spacing:1.5px;}
+.light, .home-tagline, h2, #single-project #row1 .box-text, .testimonial-cont .testimonial, #contact .black-bg, .blog-cont .entry-title, #map-bubble {font-family: "proxima-nova",sans-serif; font-style: normal; font-weight: 300; letter-spacing:1.5px;}
 .semi-bold, #nav li a, h3, h5, .button, .page-header a, #services-cont .service .service-list ul li, #row4 .box, #our-story .blue a, input[type="submit"], #cat-cont .cat-list li a, #cat-cont .cat-sort, 
 #contact-form div.wpcf7-response-output { font-family: "proxima-nova",sans-serif; font-style: normal; font-weight: 600; letter-spacing:2px;}
 .robotoregular, .testimonial-cont .author span, #home-slider .featured-info .info-cont .sub-title {font-family: 'roboto_slabregular';}
@@ -337,6 +341,7 @@ h5, #services-cont .service .service-list ul li, #cat-cont .cat-list li a {font-
 	#contact .black-bg, #cat-cont {background-color:#231f20;}
 	#home-slider .flex-control-nav {margin-bottom:105px;}
 	#section2 .cta {background-image: none !important;}
+	#section2 .header .span_4 a {min-width:0;}
 	/*STORY*/
 	#testimonial-slider h3 {margin-top:-10px;}
 	#testimonial-slider .flex-control-nav {bottom:40px;}
@@ -345,7 +350,7 @@ h5, #services-cont .service .service-list ul li, #cat-cont .cat-list li a {font-
 	#map {height:400px;}
 	#contact .black-bg  {font-size:22px;}
 	#contact .page-header {padding:40px 0 30px;}
-	#contact-form form .right-cont, #section2 .header span {padding-left:25px;}
+	#contact-form form .right-cont {padding-left:25px;}
 	#contact-form .checkbox {margin-top:10px;}
 	#contact-form .checkbox p {margin-bottom:5px;}
 	/*BLOG*/

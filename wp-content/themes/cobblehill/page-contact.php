@@ -43,9 +43,4 @@
 	</div>
 </div>
 
-<script type="text/javascript">
-     // When the window has finished loading create our google map below
- 
-
- </script>
 <?php get_footer(); ?>
