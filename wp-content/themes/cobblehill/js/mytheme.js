@@ -29,6 +29,7 @@ $(window).load(function() {
 	}
 	centerSliderNav();
 	$('#contact-form .ajax-loader').attr('src', '/wp-content/themes/cobblehill/images/ajax-loader.gif');
+	initialize();
 });
 
 $(document).ready(function() {
@@ -47,14 +48,14 @@ $(document).ready(function() {
 	    increaseArea: '20%' // optional
 	});	
     $('#contact-form .ajax-loader').attr('src', '/wp-content/themes/cobblehill/images/preloader.gif');
-	initialize();
+	
 
 });
 
 $(window).resize(function() {
 	// if ($(window).width() > 1024) {homeCtas();}
 	centerSliderNav();
-	//initialize();
+	initialize();
 
 });
 
@@ -217,7 +218,6 @@ function centerSliderNav() {
 	$('.flex-control-nav').css({'left': (contW - navW)/2});
 }
 
-
 function initialize() {
 	var myLatlng = new google.maps.LatLng(32.787508,-79.929562);
     var mapOptions = {
@@ -245,18 +245,26 @@ function initialize() {
 	var infowindow = new google.maps.InfoWindow({content: contentString});
 	var center;
 
-	function calculateCenter() {
-	  center = map.getCenter();
-	}
+
 	google.maps.event.addListener(marker, 'click', function() {
 		infowindow.open(map,marker);
 	});
-	google.maps.event.addDomListener(map, 'idle', function() {
-	  calculateCenter();
-	});
-	google.maps.event.addDomListener(window, 'resize', function() {
-	  map.setCenter(center);
+	function calculateCenter() {
+	  center = map.getCenter();
+	}
+	// google.maps.event.addDomListener(map, 'idle', function() {
+	//   calculateCenter();
+	// });
+	// google.maps.event.addDomListener(window, 'resize', function() {
+	//   map.setCenter(center);
+	// });
+	
+	google.maps.event.addListenerOnce(map, 'idle', function() {
+		calculateCenter();
+	   google.maps.event.trigger(map, 'resize');
+	   map.setCenter(center); // var center = new google.maps.LatLng(50,3,10.9);
 	});
 
 }
+
 

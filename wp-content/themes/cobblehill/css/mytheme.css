@@ -171,6 +171,7 @@ a[href^="http://maps.google.com/maps"], .gmnoprint a, .gmnoprint span, img[src="
 #map-bubble h5 {margin-bottom:0;}
 #map-bubble .button {float:left; width:100%; min-width:0; margin-top:20px;}
 #map-bubble #map-address {position:relative; float:left; width:260px; margin-top:35px;}
+#map img {max-width:none !important;}
 
 /*BLOG*/
 #cat-cont {padding:43px 0 15px 0;}
