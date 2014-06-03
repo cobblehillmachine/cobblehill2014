@@ -22,10 +22,8 @@
 </div>
 <div id="section2" class="cont">
 	<div class="header cont">
-		<div class="center-cont">
-			<span class="col">Our Specialties</span>
-			<a class="button black" href="/services">what we do</a>
-		</div>
+		<span>Our Specialties</span>
+		<a class="button black" href="/services">what we do</a>
 	</div>
 	<div id="cta-cont" class="cont">
 		<?php query_posts(array('post_type' => 'Services', 'order' => 'ASC', 'posts_per_page' => 3)); ?>

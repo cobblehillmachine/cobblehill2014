@@ -1,6 +1,5 @@
 $(window).bind('load', function() {
    $('#wrapper').delay(200).fadeIn('slow');
-	centerSliderNav();
 });
 
 $(window).load(function() {
@@ -52,7 +51,7 @@ $(document).ready(function() {
 });
 
 $(window).resize(function() {
-	if ($(window).width() > 1024) {homeCtas();}
+	// if ($(window).width() > 1024) {homeCtas();}
 	centerSliderNav();
 
 });
