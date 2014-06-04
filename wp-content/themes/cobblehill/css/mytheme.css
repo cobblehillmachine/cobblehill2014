@@ -59,6 +59,7 @@ mark {background:#fff;}
 
 /*HOMEPAGE*/
 #bg-video video {opacity:.5; filter:alpha(opacity=50);}
+/*#bg-video .videoWrapper {background:url(../images/cobble-hill-header.jpg) no-repeat; background-size:cover; }*/
 .home-tagline {text-transform:uppercase; font-size:38px; z-index:10; position:absolute; top:35%; width:100%; letter-spacing:3.5px !important; text-align:center;}
 #home-scroll {z-index:10; position:absolute; top:60%; width:100%; text-align:center;}
 #section1 {background:#fff; padding:95px 0; text-align:center;}
