@@ -1,7 +1,6 @@
 $(window).bind('load', function() {
-   $('#wrapper').delay(200).fadeIn('slow');
+   $('html').delay(300).fadeTo( "slow" , 1);
 });
-
 
 $(window).load(function() {
 	$('#project-slider ul.slides img, #story-slider ul.slides img').each(function() {
