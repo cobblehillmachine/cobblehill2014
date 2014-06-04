@@ -147,8 +147,8 @@ mark {background:#fff;}
 
 /*CONTACT*/
 #contact .page-header {padding:70px 0 60px 0;}
-#map {height:720px;}
-a[href^="http://maps.google.com/maps"], .gmnoprint a, .gmnoprint span, img[src="https://maps.gstatic.com/mapfiles/api-3/images/mapcnt3.png"] {display:none !important}
+#map {height:830px;}
+a[href^="http://maps.google.com/maps"], .gmnoprint a, .gmnoprint span {display:none !important}
 .gmnoprint div {background:none !important;}
 #contact .black-bg {padding:95px 0 85px; font-size:30px; font-weight:100 !important;}
 #contact .black-bg .button {float:left; margin-top:20px;}
@@ -176,6 +176,7 @@ a[href^="http://maps.google.com/maps"], .gmnoprint a, .gmnoprint span, img[src="
 #map-bubble .button {float:left; width:100%; min-width:0; margin-top:20px;}
 #map-bubble #map-address {position:relative; float:left; width:260px; margin-top:35px;}
 #map img {max-width:none !important;}
+img[src="https://maps.gstatic.com/mapfiles/api-3/images/mapcnt3.png"] {max-width:auto;}
 
 /*BLOG*/
 #cat-cont {padding:43px 0 15px 0;}
@@ -203,7 +204,7 @@ a[href^="http://maps.google.com/maps"], .gmnoprint a, .gmnoprint span, img[src="
 
 
 /*REUSABLE*/
-#bg-video, #single-project .banner, #story-slider, #map {z-index:0; margin-top:-107px; }
+#bg-video, #single-project .banner, #story-slider, #map {z-index:0; margin-top:-97px; }
 .mid-cont {position:relative; width:85%; margin:auto;}
 .center-cont {position:relative; margin:auto;}
 .desktop {display:block;}
@@ -320,7 +321,7 @@ h5, #services-cont .service .service-list ul li, #cat-cont .cat-list li a {font-
 	h1 {font-size:30px; line-height:34px;}
 	h2 {font-size:28px; line-height:32px;}
 	#section1 {padding:20px 0 50px;}
-	#main-wrap, #single-project .banner, #story-slider, #home-slider .featured-info {margin:0;}
+	#main-wrap, #single-project .banner, #story-slider, #home-slider .featured-info, #map {margin:0;}
 	.page-header {padding:90px 0 50px;}
 	#our-story .blue h5, #our-story .blue h2 {width:50%;}
 	#home-slider .featured-info {max-width:100%;}	
@@ -354,7 +355,7 @@ h5, #services-cont .service .service-list ul li, #cat-cont .cat-list li a {font-
 	#testimonial-slider .flex-control-nav {bottom:40px;}
 	
 	/*CONTACT*/
-	#map {height:400px;}
+	#map {height:500px;}
 	#contact .black-bg  {font-size:22px;}
 	#contact .page-header {padding:40px 0 30px;}
 	#contact-form form .right-cont {padding-left:25px;}

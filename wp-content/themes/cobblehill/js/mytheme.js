@@ -1,5 +1,5 @@
 $(window).bind('load', function() {
-   $('html').delay(300).fadeTo( "slow" , 1);
+   $('html').delay(100).fadeTo( "slow" , 1);
 });
 
 $(window).load(function() {
@@ -247,6 +247,7 @@ function initialize() {
 
 	google.maps.event.addListener(marker, 'click', function() {
 		infowindow.open(map,marker);
+		//$('#map').css({'z-index': 100});
 	});
 	function calculateCenter() {
 	  center = map.getCenter();
