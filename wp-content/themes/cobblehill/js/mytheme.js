@@ -1,5 +1,6 @@
 $(window).bind('load', function() {
-   $('html').delay(100).fadeTo( "slow" , 1);
+   $('#wrapper').delay(100).fadeTo( "slow" , 1);
+   $('#loader').fadeOut();
 });
 
 $(window).load(function() {
