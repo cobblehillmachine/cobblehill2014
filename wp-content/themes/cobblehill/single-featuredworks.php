@@ -9,7 +9,7 @@
 				<a class="button" href="<?php the_field('website_url'); ?>" target="_blank">view the site</a>
 			</div>
 		</div>
-		<div id="row1" class="cont black-bg">
+		<div id="row1" class="cont black-bg hideme">
 			<div class="center-cont">
 				<div class="table">
 					<?php if ( get_post_meta($post->ID, 'small_image_left', true) ) { ?>
@@ -26,7 +26,7 @@
 			</div>
 		</div>
 		<?php if ( get_post_meta($post->ID, 'video', true) ){ ?>
-			<div class="cont black-bg">
+			<div class="cont black-bg hideme">
 				<div class="center-cont">
 					<div class="videoWrapper">
 						<?php the_field('video'); ?>
@@ -34,7 +34,7 @@
 				</div>
 			</div>		
 		<?php } else { ?>
-			<div id="project-slider" class="cont black-bg">
+			<div id="project-slider" class="cont black-bg hideme">
 				<div class="center-cont">
 					<div id="flexslider" class="flexslider cont">
 						<ul class="slides">
@@ -46,7 +46,7 @@
 				</div>
 			</div>
 		<?php } ?>
-		<div id="row3" class="cont darker">
+		<div id="row3" class="cont darker hideme">
 			<div class="center-cont">
 				<div class="testimonial-cont cont" style="background:url(<?php echo the_field('testimonial_background'); ?>) no-repeat center center;">
 					<div class="testimonial-info">				
@@ -57,7 +57,7 @@
 				</div>
 			</div>
 		</div>
-		<div id="row4" class="cont">
+		<div id="row4" class="cont hideme">
 			<div class="strategy box row">
 				<?php echo implode('<br/> ', get_field('strategy')); ?>
 			</div>

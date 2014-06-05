@@ -45,7 +45,7 @@
 </head>
 
 <body <?php body_class(); ?> id="<?php echo  strtolower(str_replace(' ','-',get_the_title())); ?>">
-	<!--[if IE]><div style='clear: both; height: 112px; padding:0; position: relative;'><a href="http://www.theie8countdown.com/ie-users-info"><img src="http://www.theie8countdown.com/assets/badge_iecountdown.png" border="0" height="112" width="348" alt="" /></a></div><![endif]-->
+
 	<div id="wrapper">
 		<div id="nav">
 			<div class="mid-cont">
@@ -67,7 +67,7 @@
 			<?php if(is_home() || is_single() && !is_singular( 'featuredworks' )  || is_category() ) { ?>
 				<div id="cat-cont" class="black-bg cont">
 					<div class="mid-cont">
-						<h1>What's New</h1>
+						<a class="blog-link" href="/whats-new"><h1>What's New</h1></a>
 						<div class="cat-sort hidden">SORT BY</div>
 						 <div class="cat-list"><?php wp_nav_menu( array( 'menu' => 'Blog Cat') ); ?></div>
 					</div>

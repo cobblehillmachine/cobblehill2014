@@ -8,6 +8,7 @@
 		  <source src="<?php echo get_template_directory_uri(); ?>/videos/cobble-hill-video.mp4" type="video/mp4">
 		  <source src="<?php echo get_template_directory_uri(); ?>/videos/cobble-hill-video.ogv" type="video/ogv">
 		  <source src="<?php echo get_template_directory_uri(); ?>/videos/cobble-hill-video.webm" type="video/webm">
+				<!--[if IE]><div style='clear: both; height: 112px; padding:0; position: relative;'><a href="http://www.theie8countdown.com/ie-users-info"><img src="http://www.theie8countdown.com/assets/badge_iecountdown.png" border="0" height="112" width="348" alt="" /></a></div><![endif]-->
 		</video>
 	</div>
 </div>
