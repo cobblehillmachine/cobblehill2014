@@ -55,7 +55,7 @@
 </head>
 
 <body <?php body_class(); ?> id="<?php echo  strtolower(str_replace(' ','-',get_the_title())); ?>">
-	<img id="loader" alt="" src="<?php echo get_template_directory_uri(); ?>/images/elephant.png" />
+	<div id="loader"></div>
 	<div id="wrapper">
 		<div id="nav">
 			<div class="mid-cont">
