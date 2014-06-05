@@ -75,7 +75,7 @@ mark {background:#fff;}
 #section2 .cta:nth-child(2) .no-hover .icon img {display:inline-block; width:115px; height:119px;}
 #section2 .cta:last-child .no-hover .icon img {display:inline-block; width:127px; height:115px;}
 #section2 .cta .for-hover .icon img {width:85px; height:auto;}
-#section2 .cta:first-child .icon {margin:55px 0 0 12px;}
+#section2 .cta:first-child .icon {margin-top:55px; padding-left:12px;}
 #section2 .cta h3 {margin:25px 0 0 0;}
 #cta-cont .cta span {font:normal 14px 'roboto_slabregular'; width:100%; display:inline-block; margin-top:8px;}
 #cta-cont .cta .description .sep {height:3px; width:12px; display:inline-block; background:#231f20;}
@@ -84,7 +84,7 @@ mark {background:#fff;}
 #home-slider .featured-info .info-cont {padding:30px 25px;}
 #home-slider .featured-info h5, #home-slider .featured-info h2 {margin-bottom:0;}
 #section2 .cta .for-hover {opacity:0;}
-#section2 .cta:first-child .for-hover .icon {margin-left:10px;}
+#section2 .cta:first-child .for-hover .icon {padding-left:10px;}
 
 /*SERVICES*/
 .page-header {padding:85px 0 100px; text-align:center;}
