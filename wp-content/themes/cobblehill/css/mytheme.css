@@ -120,7 +120,7 @@ mark {background:#fff;}
 .flex-control-nav li a.flex-active, #single-project .flex-control-nav li a:hover {background:#fff;}
 .testimonial-cont {text-align:center; color:#fff;}
 .testimonial-cont .testimonial-info {position:relative; float:left; width:100%; padding:65px 0;}
-.testimonial-cont .testimonial-info .author {display:inline-block; width:100%;}
+.testimonial-cont .testimonial-info .author {display:inline-block; width:100%; padding:0 25px;}
 .testimonial-cont .testimonial {font-size:30px; max-width:900px; display:inline-block; margin-bottom:25px; padding:0 25px;}
 #row4 .box {background-size:80px !important; text-align:center; font-size:12px; text-transform:uppercase; padding:130px 0 30px 0; min-height:375px; line-height:30px;}
 #row4 .strategy {background:url(../images/strategy-icon.png) no-repeat center 40px #2ba0a3;}
@@ -185,7 +185,7 @@ img[src="https://maps.gstatic.com/mapfiles/api-3/images/mapcnt3.png"] {max-width
 .blog-cont article {text-align:center; padding:95px 0 90px; border-top:3px solid #231f20; background:url(../images/black-arrow-down.png) no-repeat center top;}
 .blog-cont article:first-child {background:none; border-top:none;}
 .blog-cont #infscr-loading {background:url(../images/ajax-loader.gif) no-repeat center center; width:100% !important; height:30px; position:relative; float:left; margin-bottom:25px; margin-top:30px;}
-.blog-cont #infscr-loading img, .blog-cont .navigation {display:none !important;}
+.blog-cont #infscr-loading img, .blog-cont .navigation, #infscr-loading em {display:none !important;}
 .small-divider {display:inline-block; width:15px; height:3px; background:#231f20; margin:0 0 10px;}
 .blog-cont .entry-meta {display:inline-block; margin-top:30px; min-width:580px;}
 .blog-cont .entry-meta .cat-links {color:#8c8385; float:left;}
