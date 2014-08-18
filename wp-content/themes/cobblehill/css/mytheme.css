@@ -136,6 +136,7 @@ mark {background:#fff;}
 #post-nav .nav-links h5, #post-nav .nav-links h2 {margin-bottom:0;}
 #post-nav .nav-links .prev .post-info {padding-left:45px;}
 #post-nav .nav-links .next .post-info {padding-right:45px;}
+#testimonial-slider .flex-control-nav {left:calc(50% - 80px) !important;}
 
 /*OUR STORY*/
 #our-story .blue {padding:95px 5%;}
