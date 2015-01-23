@@ -12,12 +12,6 @@ $(window).load(function()
 });
 
 
-if( $('#story-slider .flexslider')[0] != null ||
-  $('#home-slider .flexslider')[0] != null ||
-  $('#testimonial-slider .flexslider')[0] != null ||
-  $('#project-slider .flexslider')[0] != null
-
-){
 
   if ( $(window).width() > 767 ) {
 
@@ -43,7 +37,6 @@ if( $('#story-slider .flexslider')[0] != null ||
 
   }
 
-}
 
 
 
