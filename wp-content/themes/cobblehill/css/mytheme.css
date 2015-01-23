@@ -21,7 +21,7 @@ input:-webkit-autofill {-webkit-box-shadow: 0 0 0px 1000px white inset;}
 mark {background:#fff;}
 * {box-sizing:border-box; -webkit-box-sizing:border-box; -moz-box-sizing:border-box;}
 *:focus {outline:none;}
-#loader {position:absolute; transform:translate(-50%, -50%); z-index:10; background:url(../images/elephant-animated.gif) no-repeat; width:200px; height:182px;}
+#loader {position:absolute; left:calc(50% - 100px); top:calc(50% - 120px); z-index:10; background:url(../images/elephant-animated.gif) no-repeat; width:200px; height:240px;}
 
 /*HEADER*/
 #header {position:fixed; top:0; width:100%; padding:35px 0; z-index:1; }
