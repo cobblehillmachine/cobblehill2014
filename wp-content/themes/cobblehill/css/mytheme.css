@@ -1,4 +1,4 @@
-@font-face {font-family: 'roboto_slabregular'; src: url(../fonts/RobotoSlab-Regular-webfont.eot) ;src: url(../fonts/RobotoSlab-Regular-webfont.eot?#iefix) format('embedded-opentype'), url(../fonts/RobotoSlab-Regular-webfont.woff) format('woff'), url(../fonts/RobotoSlab-Regular-webfont.ttf) format('truetype'), 
+@font-face {font-family: 'roboto_slabregular'; src: url(../fonts/RobotoSlab-Regular-webfont.eot) ;src: url(../fonts/RobotoSlab-Regular-webfont.eot?#iefix) format('embedded-opentype'), url(../fonts/RobotoSlab-Regular-webfont.woff) format('woff'), url(../fonts/RobotoSlab-Regular-webfont.ttf) format('truetype'),
 url(../fonts/RobotoSlab-Regular-webfont.svg#roboto_slabregular) format('svg'); font-weight: normal; font-style: normal;}
 @font-face {font-family: 'roboto_slablight';src: url(../fonts/RobotoSlab-Light-webfont.eot);src: url(../fonts/RobotoSlab-Light-webfont.eot?#iefix) format('embedded-opentype'),url(../fonts/RobotoSlab-Light-webfont.woff) format('woff'),url(../fonts/RobotoSlab-Light-webfont.ttf) format('truetype'),
 url(../fonts/RobotoSlab-Light-webfont.svg#roboto_slablight) format('svg');font-weight: normal;font-style: normal;}
@@ -25,7 +25,7 @@ mark {background:#fff;}
 
 /*HEADER*/
 #header {position:fixed; top:0; width:100%; padding:35px 0; z-index:1; }
-.logo {margin-top:5px; background:url(../images/logos.png) no-repeat; width:172px; height:17px;}
+.logo {margin-top:5px; background:url(../images/logo.png) no-repeat; width:172px; height:17px;}
 #header .hamburger {background:url(../images/hamburger-icon.png) no-repeat; width:36px; height:27px;}
 #nav .logo {background-position:0 -18px;}
 #header.scrolled {background:#231f20; padding:20px 0;}
@@ -130,7 +130,7 @@ mark {background:#fff;}
 #post-nav .prev, #post-nav .next {padding:35px 0 40px 0;}
 #post-nav .nav-links a {float:left; width:50%;}
 #post-nav .nav-links .next {text-align:right; float:right;}
-#post-nav .nav-links .arrow {position:absolute; margin-top:4px; width:9px; height:16px;} 
+#post-nav .nav-links .arrow {position:absolute; margin-top:4px; width:9px; height:16px;}
 #post-nav .nav-links .prev .arrow {background:url(../images/arrow-left-white-bg.png) no-repeat left center #231f20; left:0;}
 #post-nav .nav-links .next .arrow {background:url(../images/arrow-right-white-bg.png) no-repeat left center #231f20; right:0;}
 #post-nav .nav-links h5, #post-nav .nav-links h2 {margin-bottom:0;}
@@ -251,13 +251,13 @@ h5, #services-cont .service .service-list ul li, #cat-cont .cat-list li a {font-
 /*FONTS*/
 .thin, .headline, #section2 .header span, h1 {font-family: "proxima-nova",sans-serif; font-style: normal; font-weight: 100;}
 .light, .home-tagline, h2, #single-project #row1 .box-text, .testimonial-cont .testimonial, #contact .black-bg, .blog-cont .entry-title, #map-bubble {font-family: "proxima-nova",sans-serif; font-style: normal; font-weight: 300; letter-spacing:1.5px;}
-.semi-bold, #nav li a, h3, h5, .button, .page-header a, #services-cont .service .service-list ul li, #row4 .box, #our-story .blue a, input[type="submit"], #cat-cont .cat-list li a, #cat-cont .cat-sort, 
+.semi-bold, #nav li a, h3, h5, .button, .page-header a, #services-cont .service .service-list ul li, #row4 .box, #our-story .blue a, input[type="submit"], #cat-cont .cat-list li a, #cat-cont .cat-sort,
 #contact-form div.wpcf7-response-output { font-family: "proxima-nova",sans-serif; font-style: normal; font-weight: 600; letter-spacing:2px;}
 .robotoregular, .testimonial-cont .author span, #home-slider .featured-info .info-cont .sub-title {font-family: 'roboto_slabregular';}
 
 /*RETINA*/
 @media (-webkit-min-device-pixel-ratio: 2) , (min-resolution: 192dpi) {
-	.logo {background:url(../images/logos@2x.png) no-repeat; background-size:172px;}
+	.logo {background:url(../images/logo@2x.png) no-repeat; background-size:172px;}
 	#header .hamburger {background:url(../images/hamburger-icon@2x.png) no-repeat; background-size:36px;}
 	#nav .close {background:url(../images/white-x@2x.png) no-repeat; background-size:29px;}
 	#row4 .strategy {background:url(../images/strategy-icon@2x.png) no-repeat center 40px #2ba0a3;}
@@ -268,7 +268,7 @@ h5, #services-cont .service .service-list ul li, #cat-cont .cat-list li a {font-
 	#loader {background:url(../images/animated-elephant@2x.gif) no-repeat; background-size:100px;}
 }
 
-/*GRIDPAK*/    
+/*GRIDPAK*/
 .span_1 {width:8.33333333333%;}
 .span_2 {width:16.6666666667%; float:left;}
 .span_3, #footer .social-cont, #services-cont .service .icon, #services-cont .service .service-list {width:25.0%; float:left;}
@@ -327,7 +327,7 @@ h5, #services-cont .service .service-list ul li, #cat-cont .cat-list li a {font-
 	#main-wrap, #single-project .banner, #story-slider, #home-slider .featured-info, #map {margin:0;}
 	.page-header {padding:90px 0 50px;}
 	#our-story .blue h5, #our-story .blue h2 {width:50%;}
-	#home-slider .featured-info {max-width:100%;}	
+	#home-slider .featured-info {max-width:100%;}
 	/*#HEADER*/
 	#nav {position:absolute;}
 	#menu-main-nav {height:auto;}
@@ -356,7 +356,7 @@ h5, #services-cont .service .service-list ul li, #cat-cont .cat-list li a {font-
 	/*STORY*/
 	#testimonial-slider h3 {margin-top:-10px;}
 	#testimonial-slider .flex-control-nav {bottom:40px;}
-	
+
 	/*CONTACT*/
 	#map {height:500px;}
 	#contact .black-bg  {font-size:22px;}
@@ -366,7 +366,7 @@ h5, #services-cont .service .service-list ul li, #cat-cont .cat-list li a {font-
 	#contact-form .checkbox p {margin-bottom:5px;}
 	/*BLOG*/
 	#cat-cont .cat-list {margin-top:10px; padding-bottom:10px;}
-	#section2 .cta .for-hover {opacity:1;}	
+	#section2 .cta .for-hover {opacity:1;}
 }
 
 @media screen and (max-width:767px) {
@@ -429,7 +429,7 @@ h5, #services-cont .service .service-list ul li, #cat-cont .cat-list li a {font-
 	#story-slider .flex-control-nav {margin-top:25px;}
 	#story-slider .flex-control-nav li a.flex-active, #story-slider .flex-control-nav li a:hover, #home-slider .flex-control-nav li a.flex-active, #home-slider .flex-control-nav li a:hover {background-color:#231f20;}
 	#home-slider .flex-control-nav {margin-bottom:0;}
-	
+
 }
 
 @media screen and (max-width:479px) {
