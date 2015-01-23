@@ -69,8 +69,8 @@ $(window).scroll(function() {
 			$('#header .hamburger').css({'background-position':'0 -28px'});
 			//$('#cat-cont').css({'position': 'fixed', 'top': 77});
         }else {
-            $('#header').removeClass('scrolled');
-			$('#header .logo, #header .hamburger').css({'background-position':'0 0'});
+            $('#header').removeClass('scrolled');$('#header .logo').addClass('white');
+			$(''#header .hamburger').css({'background-position':'0 0'});
 			//$('#cat-cont').css({'position': 'relative', 'top': 0});
         }
 	}
