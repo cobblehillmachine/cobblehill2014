@@ -7,11 +7,9 @@ $(window).load(function()
 {
 
   $('#project-slider ul.slides img, #story-slider ul.slides img').each(function()
-{
-  $(this).wrapAll('<li></li>');
-});
-
-
+  {
+    $(this).wrapAll('<li></li>');
+  });
 
   if ( $(window).width() > 767 ) {
 
@@ -37,12 +35,9 @@ $(window).load(function()
 
   }
 
-
-
-
-centerSliderNav();
-$('#contact-form .ajax-loader').attr('src', '/wp-content/themes/cobblehill/images/ajax-loader.gif');
-colorTransition();
+  centerSliderNav();
+  $('#contact-form .ajax-loader').attr('src', '/wp-content/themes/cobblehill/images/ajax-loader.gif');
+  colorTransition();
 
 });
 
