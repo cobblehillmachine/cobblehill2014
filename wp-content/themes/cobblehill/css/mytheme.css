@@ -25,7 +25,7 @@ mark {background:#fff;}
 
 /*HEADER*/
 #header {position:fixed; top:0; width:100%; padding:35px 0; z-index:1; }
-.logo {margin-top:5px; background:url(../images/logo.png) no-repeat; width:172px; height:17px;}
+.logo {margin-top:5px; background:url(../images/logo.png) no-repeat; width:172px; height:17px;}.logo.white{background:url(../images/logo-white.png) no-repeat;}
 #header .hamburger {background:url(../images/hamburger-icon.png) no-repeat; width:36px; height:27px;}
 #nav .logo {background-position:0 -18px;}
 #header.scrolled {background:#231f20; padding:20px 0;}
@@ -257,7 +257,7 @@ h5, #services-cont .service .service-list ul li, #cat-cont .cat-list li a {font-
 
 /*RETINA*/
 @media (-webkit-min-device-pixel-ratio: 2) , (min-resolution: 192dpi) {
-	.logo {background:url(../images/logo@2x.png) no-repeat; background-size:172px;}
+	.logo {background:url(../images/logo@2x.png) no-repeat; background-size:172px;}.logo.white{background:url(../images/logo-white.png) no-repeat;}
 	#header .hamburger {background:url(../images/hamburger-icon@2x.png) no-repeat; background-size:36px;}
 	#nav .close {background:url(../images/white-x@2x.png) no-repeat; background-size:29px;}
 	#row4 .strategy {background:url(../images/strategy-icon@2x.png) no-repeat center 40px #2ba0a3;}
